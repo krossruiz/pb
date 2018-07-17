@@ -50,6 +50,17 @@ public class PlayerMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		switch (player_direction) {
+		case(PlayerFacingDirection.LEFT):
+			this.transform.localScale = new Vector3 (
+				-this.transform.localScale.x,
+				this.transform.localScale.y,
+				this.transform.localScale.z
+			);
+			break;
+		default:
+			break;
+		}
 		animator = this.GetComponentInChildren<Animator> ();
 		rb = this.GetComponent<Rigidbody> ();
 	}
@@ -78,6 +89,18 @@ public class PlayerMovement : MonoBehaviour {
 			case(JumpStates.LANDED):
 				break;
 			default:
+				switch(player_direction){
+				case(PlayerFacingDirection.RIGHT):
+					this.transform.localScale = new Vector3 (
+						-this.transform.localScale.x,
+						this.transform.localScale.y,
+						this.transform.localScale.z
+					);
+					player_direction = PlayerFacingDirection.LEFT;
+					break;
+				default:
+					break;
+				}
 				animator.SetBool ("IsRunning", true);
 				move_player_left ();
 				break;
@@ -88,6 +111,18 @@ public class PlayerMovement : MonoBehaviour {
 			case(JumpStates.LANDED):
 				break;
 			default:
+				switch(player_direction){
+				case(PlayerFacingDirection.LEFT):
+					this.transform.localScale = new Vector3 (
+						-this.transform.localScale.x,
+						this.transform.localScale.y,
+						this.transform.localScale.z
+					);
+					player_direction = PlayerFacingDirection.RIGHT;
+					break;
+				default:
+					break;
+				}
 				animator.SetBool ("IsRunning", true);
 				move_player_right ();
 				break;

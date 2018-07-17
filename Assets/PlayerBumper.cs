@@ -8,7 +8,9 @@ public class PlayerBumper : MonoBehaviour {
 		TOP_BUMPER,
 		BOTTOM_BUMPER,
 		LEFT_BUMPER,
-		RIGHT_BUMPER
+		RIGHT_BUMPER,
+		FORWARD_HAND,
+		BACK_HAND
 	}
 
 	public PlayerBumperType player_bumper_type;

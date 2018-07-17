@@ -19,6 +19,10 @@ public class PlayerBumperMaster : MonoBehaviour {
 
 	}
 
+	public void front_bumper_collision(){
+		Debug.Log ("Hit!");
+	}
+
 	public void increment_bumper_intersection_count(PlayerBumper.PlayerBumperType bumper_type){
 		switch (bumper_type) {
 		case(PlayerBumper.PlayerBumperType.BOTTOM_BUMPER):
