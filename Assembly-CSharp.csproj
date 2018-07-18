@@ -52,23 +52,23 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CharacterLoader.cs" />
-     <Compile Include="Assets\CubeMove.cs" />
-     <Compile Include="Assets\FootCollider.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Audio\FmodGvrAudio.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Audio\FmodGvrAudioRoom.cs" />
      <Compile Include="Assets\GroundCollider.cs" />
-     <Compile Include="Assets\HeadCollider.cs" />
-     <Compile Include="Assets\InputMaster.cs" />
+     <Compile Include="Assets\Master Controls\InputMaster.cs" />
+     <Compile Include="Assets\Master Controls\SceneMaster.cs" />
      <Compile Include="Assets\Materials\soft_body_collider\SoftBodyCollider.cs" />
-     <Compile Include="Assets\MovementController.cs" />
-     <Compile Include="Assets\OceanController.cs" />
-     <Compile Include="Assets\PlayerAnimatorMaster.cs" />
-     <Compile Include="Assets\PlayerBumper.cs" />
-     <Compile Include="Assets\PlayerBumperMaster.cs" />
-     <Compile Include="Assets\PlayerMovement.cs" />
-     <Compile Include="Assets\ResetJab.cs" />
-     <Compile Include="Assets\ResetJabOnEnter.cs" />
-     <Compile Include="Assets\ResetJabOnExit.cs" />
-     <Compile Include="Assets\ResetJumpTrigger.cs" />
-     <Compile Include="Assets\SceneMaster.cs" />
+     <Compile Include="Assets\Player\PlayerAnimatorMaster.cs" />
+     <Compile Include="Assets\Player\PlayerBumper.cs" />
+     <Compile Include="Assets\Player\PlayerBumperMaster.cs" />
+     <Compile Include="Assets\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Player\ResetJab.cs" />
+     <Compile Include="Assets\Player\ResetJabOnEnter.cs" />
+     <Compile Include="Assets\Player\ResetJabOnExit.cs" />
+     <Compile Include="Assets\Player\ResetJumpTrigger.cs" />
+     <Compile Include="Assets\ResonanceAudio\Scripts\FmodResonanceAudio.cs" />
+     <Compile Include="Assets\ResonanceAudio\Scripts\FmodResonanceAudioRoom.cs" />
+     <Compile Include="Assets\River\OceanController.cs" />
  <Reference Include="com.unity.render-pipelines.core.Editor">
  <HintPath>C:/Users/Kross/Desktop/PunchBois/Library/ScriptAssemblies/com.unity.render-pipelines.core.Editor.dll</HintPath>
  </Reference>
@@ -645,6 +645,10 @@
  <Reference Include="Boo.Lang">
  <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{4189226D-DBA1-5B76-BF00-47633CB6D821}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
