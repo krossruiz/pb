@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{01e13679-97c4-44d2-958c-e570e8e9e9fd}">
+        <property name="assetPath">
+            <value>menu_negative.mp3</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>4.2318367346938777</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{6994f434-e438-49ed-bf54-fed5d86d9b98}</destination>
+        </relationship>
+    </object>
+</objects>

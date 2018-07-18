@@ -59,6 +59,7 @@
      <Compile Include="Assets\Master Controls\SceneMaster.cs" />
      <Compile Include="Assets\Materials\soft_body_collider\SoftBodyCollider.cs" />
      <Compile Include="Assets\Player\PlayerAnimatorMaster.cs" />
+     <Compile Include="Assets\Player\PlayerAudio.cs" />
      <Compile Include="Assets\Player\PlayerBumper.cs" />
      <Compile Include="Assets\Player\PlayerBumperMaster.cs" />
      <Compile Include="Assets\Player\PlayerMovement.cs" />

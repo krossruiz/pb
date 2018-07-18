@@ -6,10 +6,10 @@ public class PlayerMovement : MonoBehaviour {
 
 	public float walking_speed = 50.0f;
 	public float jump_magnitude = 20.0f;
-	public float gravity_magnitude = 46.64f;
 	private Animator animator;
 	public float max_walking_speed = 20f;
 	private GameObject armature;
+	private PlayerAudio player_audio;
 
 	public enum JumpStates {
 		HAS_NOT_JUMPED,
@@ -64,13 +64,14 @@ public class PlayerMovement : MonoBehaviour {
 		}
 		animator = this.GetComponentInChildren<Animator> ();
 		armature = this.transform.GetChild (1).gameObject;
+		player_audio = this.GetComponent<PlayerAudio> ();
 		Debug.Log (armature.name);
 		rb = this.GetComponent<Rigidbody> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+		
 	}
 
 	public void move_request_handler(MoveRequests move_request){
@@ -92,6 +93,7 @@ public class PlayerMovement : MonoBehaviour {
 			case(JumpStates.LANDED):
 				break;
 			default:
+				player_audio.player_walk ();
 				switch(player_direction){
 				case(PlayerFacingDirection.RIGHT):
 					this.transform.localScale = new Vector3 (
@@ -114,6 +116,7 @@ public class PlayerMovement : MonoBehaviour {
 			case(JumpStates.LANDED):
 				break;
 			default:
+				player_audio.player_walk ();
 				switch(player_direction){
 				case(PlayerFacingDirection.LEFT):
 					this.transform.localScale = new Vector3 (
