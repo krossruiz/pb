@@ -87,8 +87,8 @@ GameObject:
   - component: {fileID: 4245034633374612}
   - component: {fileID: 33822107425734042}
   - component: {fileID: 23369335547644018}
-  - component: {fileID: 65647578084597574}
   - component: {fileID: 114647419178151600}
+  - component: {fileID: 64955359378237476}
   m_Layer: 0
   m_Name: Back Hand Bumper
   m_TagString: Untagged
@@ -355,8 +355,8 @@ GameObject:
   - component: {fileID: 4469705268517484}
   - component: {fileID: 33920417677919394}
   - component: {fileID: 23088005720428390}
-  - component: {fileID: 65931194506769362}
   - component: {fileID: 114647867397647866}
+  - component: {fileID: 64829117276344488}
   m_Layer: 0
   m_Name: Forward Hand Bumper
   m_TagString: Untagged
@@ -1149,6 +1149,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!64 &64829117276344488
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1704828431873596}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &64955359378237476
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1164900912543110}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!65 &65153229621883374
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1197,18 +1225,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65647578084597574
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1164900912543110}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65734883192784478
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1221,18 +1237,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.656175, y: 17.344927, z: 9.593493}
   m_Center: {x: 0.010752024, y: -0.20487022, z: 12.887583}
---- !u!65 &65931194506769362
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1704828431873596}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95587196952278808
 Animator:
   serializedVersion: 3
@@ -1300,7 +1304,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walking_speed: 50
   jump_magnitude: 20
-  gravity_magnitude: 46.64
   max_walking_speed: 10
   player_number: 1
   player_direction: 1

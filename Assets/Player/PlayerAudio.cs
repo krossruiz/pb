@@ -17,6 +17,6 @@ public class PlayerAudio : MonoBehaviour {
 	}
 
 	public void player_walk(){
-		FMODUnity.RuntimeManager.PlayOneShot (player_walk_ref, this.transform.position);
+		//FMODUnity.RuntimeManager.PlayOneShot (player_walk_ref, this.transform.position);
 	}
 }

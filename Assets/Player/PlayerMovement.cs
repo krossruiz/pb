@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour {
 	public float max_walking_speed = 20f;
 	private GameObject armature;
 	private PlayerAudio player_audio;
+	public float jump_x_amplifier = 1.5f;
 
 	public enum JumpStates {
 		HAS_NOT_JUMPED,
@@ -51,19 +52,19 @@ public class PlayerMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		armature = this.transform.GetChild (0).gameObject;
 		switch (player_direction) {
 		case(PlayerFacingDirection.LEFT):
-			this.transform.localScale = new Vector3 (
-				-this.transform.localScale.x,
-				this.transform.localScale.y,
-				this.transform.localScale.z
+			armature.transform.localScale = new Vector3 (
+				-armature.transform.localScale.x,
+				armature.transform.localScale.y,
+				armature.transform.localScale.z
 			);
 			break;
 		default:
 			break;
 		}
 		animator = this.GetComponentInChildren<Animator> ();
-		armature = this.transform.GetChild (1).gameObject;
 		player_audio = this.GetComponent<PlayerAudio> ();
 		Debug.Log (armature.name);
 		rb = this.GetComponent<Rigidbody> ();
@@ -78,6 +79,11 @@ public class PlayerMovement : MonoBehaviour {
 		switch (move_request) {
 		case(MoveRequests.Jump):
 			switch (current_jump_state) {
+
+			//This case restricts player to single jump. Removal enables double jump.
+			case(JumpStates.JUMPED_ONCE):
+				break;
+
 			case(JumpStates.JUMPED_TWICE_OR_MORE):
 				break;
 			case(JumpStates.LANDED):
@@ -92,14 +98,21 @@ public class PlayerMovement : MonoBehaviour {
 			switch (current_jump_state) {
 			case(JumpStates.LANDED):
 				break;
+
+			//Committed jump
+			case(JumpStates.JUMPED_ONCE):
+				break;
+			case(JumpStates.JUMPED_TWICE_OR_MORE):
+				break;
+
 			default:
 				player_audio.player_walk ();
 				switch(player_direction){
 				case(PlayerFacingDirection.RIGHT):
-					this.transform.localScale = new Vector3 (
-						-this.transform.localScale.x,
-						this.transform.localScale.y,
-						this.transform.localScale.z
+					armature.transform.localScale = new Vector3 (
+						-armature.transform.localScale.x,
+						armature.transform.localScale.y,
+						armature.transform.localScale.z
 					);
 					player_direction = PlayerFacingDirection.LEFT;
 					break;
@@ -115,14 +128,21 @@ public class PlayerMovement : MonoBehaviour {
 			switch (current_jump_state) {
 			case(JumpStates.LANDED):
 				break;
+
+			//Committed jump
+			case(JumpStates.JUMPED_ONCE):
+				break;
+			case(JumpStates.JUMPED_TWICE_OR_MORE):
+				break;
+
 			default:
 				player_audio.player_walk ();
 				switch(player_direction){
 				case(PlayerFacingDirection.LEFT):
-					this.transform.localScale = new Vector3 (
-						-this.transform.localScale.x,
-						this.transform.localScale.y,
-						this.transform.localScale.z
+					armature.transform.localScale = new Vector3 (
+						-armature.transform.localScale.x,
+						armature.transform.localScale.y,
+						armature.transform.localScale.z
 					);
 					player_direction = PlayerFacingDirection.RIGHT;
 					break;
@@ -136,7 +156,15 @@ public class PlayerMovement : MonoBehaviour {
 			break;
 		case(MoveRequests.ZeroVelocity):
 			animator.SetBool ("IsRunning", false);
-			zero_player_velocity ();
+			switch (current_jump_state) {
+			case(JumpStates.JUMPED_ONCE):
+				break;
+			case(JumpStates.JUMPED_TWICE_OR_MORE):
+				break;
+			default:
+				zero_player_velocity ();
+				break;
+			}
 			break;
 		case(MoveRequests.Punch):
 			punch ();
@@ -149,6 +177,9 @@ public class PlayerMovement : MonoBehaviour {
 
 	private void punch(){
 		if (!animator.GetBool ("IsRunning")) {
+			animator.SetBool ("Jab", true);
+		}
+		if (animator.GetBool ("IsRunning") && animator.GetBool ("IsJumping")) {
 			animator.SetBool ("Jab", true);
 		}
 		//this boolean will be set to false in the ResetJab animator script.
@@ -180,7 +211,7 @@ public class PlayerMovement : MonoBehaviour {
 		default:
 			break;
 		}
-		rb.velocity = new Vector3 (rb.velocity.x, jump_magnitude, rb.velocity.z);
+		rb.velocity = new Vector3 (rb.velocity.x * jump_x_amplifier, jump_magnitude, rb.velocity.z);
 	}
 
 	private void move_player_left(){
