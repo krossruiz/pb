@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	public float walking_speed = 50.0f;
 	public float jump_magnitude = 20.0f;
-	private Animator animator;
+	public Animator animator;
 	public float max_walking_speed = 20f;
 	private GameObject armature;
 	private PlayerAudio player_audio;
@@ -296,5 +296,9 @@ public class PlayerMovement : MonoBehaviour {
 
 	private void zero_player_velocity(){
 		rb.velocity = Vector3.zero;
+	}
+
+	public void death(){
+		animator.SetBool ("IsDead", true);
 	}
 }

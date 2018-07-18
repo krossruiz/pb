@@ -57,10 +57,12 @@
      <Compile Include="Assets\GroundCollider.cs" />
      <Compile Include="Assets\Master Controls\InputMaster.cs" />
      <Compile Include="Assets\Master Controls\SceneMaster.cs" />
+     <Compile Include="Assets\Player\OtherPlayerInfo.cs" />
      <Compile Include="Assets\Player\PlayerAnimatorMaster.cs" />
      <Compile Include="Assets\Player\PlayerAudio.cs" />
      <Compile Include="Assets\Player\PlayerBumper.cs" />
      <Compile Include="Assets\Player\PlayerBumperMaster.cs" />
+     <Compile Include="Assets\Player\PlayerMaster.cs" />
      <Compile Include="Assets\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Player\ResetJab.cs" />
      <Compile Include="Assets\Player\ResetJabOnEnter.cs" />

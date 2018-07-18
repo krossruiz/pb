@@ -28,10 +28,23 @@ public class PlayerBumper : MonoBehaviour {
 		
 	}
 
+	void OnCollisionEnter(Collision collision){
+		switch (player_bumper_type) {
+		case(PlayerBumperType.FORWARD_HAND):
+			break;
+		}
+	}
+
 	void OnTriggerEnter(Collider other){
 		switch(player_bumper_type){
 		case(PlayerBumper.PlayerBumperType.BOTTOM_BUMPER):
 			player_bumper_master.increment_bumper_intersection_count (player_bumper_type);
+			break;
+		case(PlayerBumper.PlayerBumperType.LEFT_BUMPER):
+			player_bumper_master.left_bumper_hit (other);
+			break;
+		case(PlayerBumper.PlayerBumperType.RIGHT_BUMPER):
+			player_bumper_master.right_bumper_hit (other);
 			break;
 		default:
 			break;

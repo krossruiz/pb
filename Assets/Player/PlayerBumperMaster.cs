@@ -8,16 +8,70 @@ public class PlayerBumperMaster : MonoBehaviour {
 	public int left_bumper_collider_intersection_count { get; private set;} = 0;
 	public int right_bumper_collider_intersection_count { get; private set;} = 0;
 
+	private PlayerMovement player_movement;
+	private Animator animator;
+	private OtherPlayerInfo other_player_info;
+
+	private PlayerMaster player_master;
+
 	// Use this for initialization
 	void Start () {
-		
+		player_master = this.GetComponent<PlayerMaster> ();
+		player_movement = player_master.player_movement;
+		animator = player_master.animator;
+		other_player_info = player_master.other_player_info;
 	}
 
 
 	// Update is called once per frame
 	void Update () {
-
+		
 	}
+
+	public void left_bumper_hit(Collider collider){
+		try{
+			PlayerBumper.PlayerBumperType player_bumper_type = collider.GetComponent<PlayerBumper> ().player_bumper_type;
+
+			if (player_bumper_type != null) {
+				switch(player_bumper_type){
+				case(PlayerBumper.PlayerBumperType.FORWARD_HAND):
+					//
+					//I don't want THIS player's animator jab, I want the OTHER player's!
+					//How to reference?
+					//
+					player_movement.death ();	
+					break;
+				default:
+					break;
+				}
+			}
+		}catch(System.NullReferenceException e){
+
+		}
+	}
+
+	public void right_bumper_hit(Collider collider){
+		try{
+			PlayerBumper.PlayerBumperType player_bumper_type = collider.GetComponent<PlayerBumper> ().player_bumper_type;
+
+			if (player_bumper_type != null) {
+				switch(player_bumper_type){
+				case(PlayerBumper.PlayerBumperType.FORWARD_HAND):
+					//
+					//I don't want THIS player's animator jab, I want the OTHER player's!
+					//How to reference?
+					//
+					player_movement.death ();	
+					break;
+				default:
+					break;
+				}
+			}
+		}catch(System.NullReferenceException e){
+			
+		}
+	}
+		
 
 	public void front_bumper_collision(){
 		Debug.Log ("Hit!");
