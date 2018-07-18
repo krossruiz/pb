@@ -148,7 +148,9 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	private void punch(){
-		animator.SetBool ("Jab", true);
+		if (!animator.GetBool ("IsRunning")) {
+			animator.SetBool ("Jab", true);
+		}
 		//this boolean will be set to false in the ResetJab animator script.
 		//This is a subsitute for where I would usually use a trigger because
 		//a trigger makes the punch animation play twice.
