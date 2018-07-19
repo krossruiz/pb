@@ -49,9 +49,11 @@ public class PlayerMovement : MonoBehaviour {
 	public Material player_immobilized;
 
 	private MeshRenderer mesh_renderer;
+	private PlayerBumperMaster player_bumper_master;
 
 	// Use this for initialization
 	void Start () {
+		player_bumper_master = this.GetComponent<PlayerBumperMaster> ();
 		armature = this.transform.GetChild (0).gameObject;
 		switch (player_direction) {
 		case(PlayerFacingDirection.LEFT):
@@ -297,8 +299,5 @@ public class PlayerMovement : MonoBehaviour {
 	private void zero_player_velocity(){
 		rb.velocity = Vector3.zero;
 	}
-
-	public void death(){
-		animator.SetBool ("IsDead", true);
-	}
+		
 }

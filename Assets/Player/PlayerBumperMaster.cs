@@ -29,18 +29,22 @@ public class PlayerBumperMaster : MonoBehaviour {
 	}
 
 	public void left_bumper_hit(Collider collider){
+		Debug.Log ("L_BUMP");
 		try{
 			PlayerBumper.PlayerBumperType player_bumper_type = collider.GetComponent<PlayerBumper> ().player_bumper_type;
+			Debug.Log(player_bumper_type);
 
 			if (player_bumper_type != null) {
+				Debug.Log("Not null");
 				switch(player_bumper_type){
+
 				case(PlayerBumper.PlayerBumperType.FORWARD_HAND):
 					//
 					//I don't want THIS player's animator jab, I want the OTHER player's!
 					//How to reference?
 					//
-					player_movement.death ();	
-					break;
+					Debug.Log("Die?");
+					player_master.animator.SetBool("IsDead", true);					break;
 				default:
 					break;
 				}
@@ -51,17 +55,21 @@ public class PlayerBumperMaster : MonoBehaviour {
 	}
 
 	public void right_bumper_hit(Collider collider){
+		Debug.Log ("R_BUMP");
 		try{
 			PlayerBumper.PlayerBumperType player_bumper_type = collider.GetComponent<PlayerBumper> ().player_bumper_type;
+			Debug.Log(player_bumper_type);
 
 			if (player_bumper_type != null) {
+				Debug.Log("Not null");
 				switch(player_bumper_type){
 				case(PlayerBumper.PlayerBumperType.FORWARD_HAND):
 					//
 					//I don't want THIS player's animator jab, I want the OTHER player's!
 					//How to reference?
 					//
-					player_movement.death ();	
+					Debug.Log("Die?");
+					player_master.animator.SetBool("IsDead", true);
 					break;
 				default:
 					break;

@@ -51,6 +51,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\A New Start\InputManager.cs" />
+     <Compile Include="Assets\A New Start\PlayerAnimationManager.cs" />
+     <Compile Include="Assets\A New Start\PlayerAnimatorParameters.cs" />
+     <Compile Include="Assets\A New Start\PlayerAnimatorStates.cs" />
+     <Compile Include="Assets\A New Start\PlayerMovementManager.cs" />
+     <Compile Include="Assets\A New Start\PlayerSoundManager.cs" />
      <Compile Include="Assets\CharacterLoader.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Audio\FmodGvrAudio.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Audio\FmodGvrAudioRoom.cs" />
@@ -68,6 +74,7 @@
      <Compile Include="Assets\Player\ResetJabOnEnter.cs" />
      <Compile Include="Assets\Player\ResetJabOnExit.cs" />
      <Compile Include="Assets\Player\ResetJumpTrigger.cs" />
+     <Compile Include="Assets\ResetPlayerJab.cs" />
      <Compile Include="Assets\ResonanceAudio\Scripts\FmodResonanceAudio.cs" />
      <Compile Include="Assets\ResonanceAudio\Scripts\FmodResonanceAudioRoom.cs" />
      <Compile Include="Assets\River\OceanController.cs" />
