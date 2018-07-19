@@ -39,7 +39,7 @@ public class InputManager : MonoBehaviour {
 			pmm.request_run ();
 		}
 		if (Input.GetKey (KeyCode.A)) {
-
+			pmm.request_run ();
 		}
 		if (Input.GetKeyUp (KeyCode.A)) {
 			pmm.request_stop_running ();
@@ -49,7 +49,7 @@ public class InputManager : MonoBehaviour {
 			pmm.request_run ();
 		}
 		if (Input.GetKey (KeyCode.D)) {
-			
+			pmm.request_run ();
 		}
 		if (Input.GetKeyUp (KeyCode.D)) {
 			pmm.request_stop_running ();
