@@ -20,11 +20,23 @@ public class PlayerMovementManager : MonoBehaviour {
 
 	public void request_jab(){
 		if (
-			animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.idle_state_id) ||
-			animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.jab_state_id) ||
-			animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.jump_state_id) ||
-			animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.jump_punch_state_id)
+			animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.idle_state_id)
 		) {
+				pam.trigger_jab ();
+		}
+		if (
+			animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.jump_state_id) &&
+			animator.GetBool(PlayerAnimatorParameters.enable_jump_punch)){
+			pam.trigger_jab();
+		}
+		if(
+			animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.jab_state_id) &&
+			!animator.GetBool (PlayerAnimatorParameters.enable_ground_jab_cooldown)
+		){
+			pam.trigger_jab ();
+		}
+		if (animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.jump_punch_state_id) &&
+			!animator.GetBool (PlayerAnimatorParameters.enable_jump_jab_cooldown)) {
 			pam.trigger_jab ();
 		}
 	}
