@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerMovementManager : MonoBehaviour {
 
 	public float running_force_magnitude = 113.3f;
-	public float max_speed = 7.7f;
+	public float max_running_speed = 7.7f;
+	public float jump_magnitude = 10.0f;
 
 	private Rigidbody rb;
 	private Animator animator;
@@ -89,6 +90,7 @@ public class PlayerMovementManager : MonoBehaviour {
 	}
 
 	private void jump(){
+		rb.AddForce (Vector3.up * jump_magnitude);
 		pam.trigger_jump ();
 	}
 
@@ -114,7 +116,7 @@ public class PlayerMovementManager : MonoBehaviour {
 	private void run_left(){
 		if(animator.GetBool(PlayerAnimatorParameters.is_facing_right))
 			this.transform.localScale = new Vector3 (-this.transform.localScale.x, this.transform.localScale.y, this.transform.localScale.z);
-		if (Mathf.Abs (rb.velocity.x) < max_speed)
+		if (Mathf.Abs (rb.velocity.x) < max_running_speed)
 			rb.AddForce (running_force_magnitude * Vector3.left);
 		pam.run_left();
 	}
@@ -131,7 +133,7 @@ public class PlayerMovementManager : MonoBehaviour {
 	private void run_right(){
 		if(animator.GetBool(PlayerAnimatorParameters.is_facing_left))
 			this.transform.localScale = new Vector3 (-this.transform.localScale.x, this.transform.localScale.y, this.transform.localScale.z);
-		if (Mathf.Abs (rb.velocity.x) < max_speed)
+		if (Mathf.Abs (rb.velocity.x) < max_running_speed)
 			rb.AddForce (running_force_magnitude * Vector3.right);
 		pam.run_right ();
 	}
