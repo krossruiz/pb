@@ -51,7 +51,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\A New Start\CharacterFacingDirections.cs" />
      <Compile Include="Assets\A New Start\InputManager.cs" />
+     <Compile Include="Assets\A New Start\Player Spawner\PlayerSpawner.cs" />
      <Compile Include="Assets\A New Start\PlayerAnimationManager.cs" />
      <Compile Include="Assets\A New Start\PlayerAnimatorParameters.cs" />
      <Compile Include="Assets\A New Start\PlayerAnimatorStates.cs" />

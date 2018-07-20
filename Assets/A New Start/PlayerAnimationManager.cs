@@ -33,17 +33,37 @@ public class PlayerAnimationManager : MonoBehaviour {
 	}
 
 	public void trigger_landing(){
-		animator.SetBool ("jumping", false);
+		animator.SetBool (PlayerAnimatorParameters.jumping_bool_id, false);
 	}
 
-	public void run(){
-		if(!animator.GetBool("running"))
-			animator.SetBool ("running", true);
+	private void run(){
+		if(!animator.GetBool(PlayerAnimatorParameters.running_bool))
+			animator.SetBool (PlayerAnimatorParameters.running_bool, true);
+	}
+
+	public void run_left(){
+		run ();
+		face_left ();
+	}
+
+	public void run_right(){
+		run ();
+		face_right ();
 	}
 
 	public void stop_running(){
-		if(animator.GetBool("running"))
-			animator.SetBool ("running", false);
+		if(animator.GetBool(PlayerAnimatorParameters.running_bool))
+			animator.SetBool (PlayerAnimatorParameters.running_bool, false);
+	}
+
+	public void face_left(){
+		animator.SetBool (PlayerAnimatorParameters.is_facing_right, false);
+		animator.SetBool (PlayerAnimatorParameters.is_facing_left, true);
+	}
+
+	public void face_right(){
+		animator.SetBool (PlayerAnimatorParameters.is_facing_left, false);
+		animator.SetBool (PlayerAnimatorParameters.is_facing_right, true);
 	}
 
 }

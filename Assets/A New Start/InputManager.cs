@@ -10,13 +10,24 @@ public class InputManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		if (player) {
+			add_player (player);
+		}
+	}
+
+	public void add_player(GameObject new_player){
+		if (!player) {
+			player = new_player;
+		}
 		pam = player.GetComponentInChildren<PlayerAnimationManager> ();
 		pmm = player.GetComponent<PlayerMovementManager> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		wasd_listener ();
+		if (player) {
+			wasd_listener ();
+		}
 		arrows_listener ();
 	}
 
@@ -36,20 +47,20 @@ public class InputManager : MonoBehaviour {
 		}
 		////////////////////////////////////
 		if (Input.GetKeyDown (KeyCode.A)) {
-			pmm.request_run ();
+			pmm.request_run_left();
 		}
 		if (Input.GetKey (KeyCode.A)) {
-			pmm.request_run ();
+			pmm.request_run_left();
 		}
 		if (Input.GetKeyUp (KeyCode.A)) {
 			pmm.request_stop_running ();
 		}
 		/////////////////////////////////////
 		if (Input.GetKeyDown (KeyCode.D)) {
-			pmm.request_run ();
+			pmm.request_run_right();
 		}
 		if (Input.GetKey (KeyCode.D)) {
-			pmm.request_run ();
+			pmm.request_run_right();
 		}
 		if (Input.GetKeyUp (KeyCode.D)) {
 			pmm.request_stop_running ();
