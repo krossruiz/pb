@@ -740,6 +740,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68d7251fe50c514caf829cf1015d1ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  running_force_magnitude: 113.3
+  max_speed: 7.7
+  initial_facing_direction: 1
 --- !u!114 &114525122496729566
 MonoBehaviour:
   m_ObjectHideFlags: 1
