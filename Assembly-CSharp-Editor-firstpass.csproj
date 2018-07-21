@@ -72,6 +72,9 @@
      <Compile Include="Assets\Plugins\Editor\FMOD\StudioListenerEditor.cs" />
      <Compile Include="Assets\Plugins\Editor\FMOD\StudioParameterTriggerEditor.cs" />
      <Compile Include="Assets\Plugins\Editor\FMOD\Timeline\FMODEventPlayableEditor.cs" />
+ <Reference Include="Cinemachine">
+ <HintPath>C:/Users/Kross/Desktop/PunchBois/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
  <Reference Include="com.unity.render-pipelines.core.Editor">
  <HintPath>C:/Users/Kross/Desktop/PunchBois/Library/ScriptAssemblies/com.unity.render-pipelines.core.Editor.dll</HintPath>
  </Reference>
@@ -96,17 +99,14 @@
  <Reference Include="com.unity.postprocessing.Runtime">
  <HintPath>C:/Users/Kross/Desktop/PunchBois/Library/ScriptAssemblies/com.unity.postprocessing.Runtime.dll</HintPath>
  </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>C:/Users/Kross/Desktop/PunchBois/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.ShaderGraph.Editor">
  <HintPath>C:/Users/Kross/Desktop/PunchBois/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.render-pipelines.core.IncludePaths">
  <HintPath>C:/Users/Kross/Desktop/PunchBois/Library/ScriptAssemblies/com.unity.render-pipelines.core.IncludePaths.dll</HintPath>
- </Reference>
- <Reference Include="Cinemachine">
- <HintPath>C:/Users/Kross/Desktop/PunchBois/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.cinemachine.editor">
- <HintPath>C:/Users/Kross/Desktop/PunchBois/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

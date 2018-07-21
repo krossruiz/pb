@@ -43,6 +43,12 @@ public class PlayerMovementManager : MonoBehaviour {
 			jab ();
 		}
 		if (
+			animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.running_state_id)
+		) {
+			stop_running ();
+			jab ();
+		}
+		if (
 			animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.jump_state_id) &&
 			animator.GetBool(PlayerAnimatorParameters.enable_jump_punch)){
 			jab ();

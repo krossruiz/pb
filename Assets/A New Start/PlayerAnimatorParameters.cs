@@ -18,5 +18,4 @@ public static class PlayerAnimatorParameters {
 	public const string is_facing_left = "is_facing_left";
 	public const string is_facing_right = "is_facing_right";
 
-
 }
