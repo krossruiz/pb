@@ -49,18 +49,15 @@ public class PlayerMovementManager : MonoBehaviour {
 			jab ();
 		}
 		if (
-			animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.jump_state_id) &&
-			animator.GetBool(PlayerAnimatorParameters.enable_jump_punch)){
+			animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.jump_state_id)){
 			jab ();
 		}
 		if(
-			animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.jab_state_id) &&
-			!animator.GetBool (PlayerAnimatorParameters.enable_ground_jab_cooldown)
+			animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.jab_state_id)
 		){
 			jab ();
 		}
-		if (animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.jump_punch_state_id) &&
-			!animator.GetBool (PlayerAnimatorParameters.enable_jump_jab_cooldown)) {
+		if (animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.jump_punch_state_id)) {
 			jab ();
 		}
 	}
@@ -93,6 +90,11 @@ public class PlayerMovementManager : MonoBehaviour {
 		if (animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.idle_state_id)) {
 			jump ();
 		}
+		if (animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.running_state_id) &&
+			!animator.GetBool(PlayerAnimatorParameters.jumping_bool_id)
+		) {
+			jump ();
+		}
 	}
 
 	private void jump(){
@@ -102,6 +104,9 @@ public class PlayerMovementManager : MonoBehaviour {
 
 	public void request_landing(){
 		if(animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName(PlayerAnimatorStates.jump_state_id)){
+			landing ();
+		}
+		if(animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName(PlayerAnimatorStates.jump_punch_state_id)){
 			landing ();
 		}
 	}
@@ -121,7 +126,7 @@ public class PlayerMovementManager : MonoBehaviour {
 
 	private void run_left(){
 		if(animator.GetBool(PlayerAnimatorParameters.is_facing_right))
-			this.transform.localScale = new Vector3 (-this.transform.localScale.x, this.transform.localScale.y, this.transform.localScale.z);
+			this.transform.localScale = new Vector3 (-Mathf.Abs(this.transform.localScale.x), this.transform.localScale.y, this.transform.localScale.z);
 		if (Mathf.Abs (rb.velocity.x) < max_running_speed)
 			rb.AddForce (running_force_magnitude * Vector3.left);
 		pam.run_left();
@@ -138,7 +143,7 @@ public class PlayerMovementManager : MonoBehaviour {
 
 	private void run_right(){
 		if(animator.GetBool(PlayerAnimatorParameters.is_facing_left))
-			this.transform.localScale = new Vector3 (-this.transform.localScale.x, this.transform.localScale.y, this.transform.localScale.z);
+			this.transform.localScale = new Vector3 (Mathf.Abs(this.transform.localScale.x), this.transform.localScale.y, this.transform.localScale.z);
 		if (Mathf.Abs (rb.velocity.x) < max_running_speed)
 			rb.AddForce (running_force_magnitude * Vector3.right);
 		pam.run_right ();

@@ -6,10 +6,21 @@ public class ResetAnimatorParameter : StateMachineBehaviour {
 
 	public bool reset_on_enter = false;
 	public bool reset_on_exit = false;
+	public string parameter = "";
 
 	//OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 		if (reset_on_enter) {
+			switch (parameter) {
+			case("jab_qued"):
+				animator.SetBool ("jab_qued", false);
+				break;
+			case("running"):
+				animator.SetBool (PlayerAnimatorParameters.running_bool, false);
+				break;
+			default:
+				break;
+			}
 		}
 	}
 
@@ -21,7 +32,14 @@ public class ResetAnimatorParameter : StateMachineBehaviour {
 	//OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 		if(reset_on_exit){
-			
+			switch (parameter) {
+			case(PlayerAnimatorParameters.running_bool):
+				animator.SetBool (PlayerAnimatorParameters.running_bool, false);
+				break;
+			case("jab_qued"):
+				animator.SetBool ("jab_qued", false);
+				break;
+			}
 		}
 	}
 

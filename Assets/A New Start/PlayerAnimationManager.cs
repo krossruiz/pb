@@ -17,6 +17,9 @@ public class PlayerAnimationManager : MonoBehaviour {
 	}
 
 	public void trigger_jab(){
+		if (animator.GetBool ("jab")) {
+			animator.SetBool ("jab_qued", true);
+		}
 		animator.SetBool (PlayerAnimatorParameters.jab_bool_id, true);
 	}
 
