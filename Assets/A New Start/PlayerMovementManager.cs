@@ -115,18 +115,45 @@ public class PlayerMovementManager : MonoBehaviour {
 		pam.trigger_landing ();
 	}
 
+	public void request_face_left(){
+		Debug.Log ("FL");
+		if (animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.running_state_id)) {
+			Debug.Log("Face left all good man");
+			face_left ();
+		}		
+	}
+
+	private void face_left(){
+		this.transform.localScale = new Vector3 (-Mathf.Abs(this.transform.localScale.x), this.transform.localScale.y, this.transform.localScale.z);
+		pam.face_left ();
+	}
+
+	public void request_face_right(){
+		Debug.Log ("FR");
+		if (animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.running_state_id)) {
+			Debug.Log("Face right all good man");
+			face_right ();
+		}
+	}
+
+	private void face_right(){
+		this.transform.localScale = new Vector3 (Mathf.Abs(this.transform.localScale.x), this.transform.localScale.y, this.transform.localScale.z);
+		pam.face_right ();
+	}
+
 	public void request_run_left(){
 		if (
 			animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.idle_state_id) ||
 			animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.running_state_id)
 		){
-			run_left ();
+			if(!(Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.D)))
+				run_left ();
 		}
 	}
 
 	private void run_left(){
-		if(animator.GetBool(PlayerAnimatorParameters.is_facing_right))
-			this.transform.localScale = new Vector3 (-Mathf.Abs(this.transform.localScale.x), this.transform.localScale.y, this.transform.localScale.z);
+		if (animator.GetBool (PlayerAnimatorParameters.is_facing_right))
+			face_left ();
 		if (Mathf.Abs (rb.velocity.x) < max_running_speed)
 			rb.AddForce (running_force_magnitude * Vector3.left);
 		pam.run_left();
@@ -137,13 +164,14 @@ public class PlayerMovementManager : MonoBehaviour {
 			animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.idle_state_id) ||
 			animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.running_state_id)
 		){
-			run_right ();
+			if(!(Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.D)))
+				run_right ();
 		}
 	}
 
 	private void run_right(){
-		if(animator.GetBool(PlayerAnimatorParameters.is_facing_left))
-			this.transform.localScale = new Vector3 (Mathf.Abs(this.transform.localScale.x), this.transform.localScale.y, this.transform.localScale.z);
+		if (animator.GetBool (PlayerAnimatorParameters.is_facing_left))
+			face_right ();
 		if (Mathf.Abs (rb.velocity.x) < max_running_speed)
 			rb.AddForce (running_force_magnitude * Vector3.right);
 		pam.run_right ();

@@ -46,26 +46,41 @@ public class InputManager : MonoBehaviour {
 			pmm.request_jab ();
 		}
 		////////////////////////////////////
-		if (Input.GetKeyDown (KeyCode.A)) {
-			pmm.request_run_left();
-		}
 		if (Input.GetKey (KeyCode.A)) {
-			pmm.request_run_left();
+			if (!Input.GetKey (KeyCode.D)) {
+				pmm.request_run_left();
+			}
+			//pmm.request_run_left();
 		}
 		if (Input.GetKeyUp (KeyCode.A)) {
-			pmm.request_stop_running ();
+			if (!Input.GetKey (KeyCode.D)) {
+				pmm.request_stop_running ();
+			}
 		}
 		/////////////////////////////////////
-		if (Input.GetKeyDown (KeyCode.D)) {
-			pmm.request_run_right();
-		}
 		if (Input.GetKey (KeyCode.D)) {
-			pmm.request_run_right();
+			if(!Input.GetKey(KeyCode.A)){
+				pmm.request_run_right ();
+			}
+			//pmm.request_run_right();
 		}
 		if (Input.GetKeyUp (KeyCode.D)) {
-			pmm.request_stop_running ();
+			if (!Input.GetKey (KeyCode.A)) {
+				pmm.request_stop_running ();
+			}
 		}
 		//////////////////////////////////////
+		if(Input.GetKeyDown(KeyCode.D) && Input.GetKey(KeyCode.A)){
+			Debug.Log ("Request face right");
+			pmm.request_face_right ();
+			pam.stop_running ();
+		}
+		if (Input.GetKeyDown (KeyCode.A) && Input.GetKey(KeyCode.D)) {
+			Debug.Log ("Request face left");
+			pmm.request_face_left ();
+			pam.stop_running ();
+		}
+		///////////////////////////////////////
 
 		if (Input.GetKeyDown (KeyCode.LeftShift)) {
 			pmm.request_jump ();

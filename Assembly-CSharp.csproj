@@ -60,6 +60,7 @@
      <Compile Include="Assets\A New Start\PlayerAnimationManager.cs" />
      <Compile Include="Assets\A New Start\PlayerAnimatorParameters.cs" />
      <Compile Include="Assets\A New Start\PlayerAnimatorStates.cs" />
+     <Compile Include="Assets\A New Start\PlayerGravRBCollider.cs" />
      <Compile Include="Assets\A New Start\PlayerMovementManager.cs" />
      <Compile Include="Assets\A New Start\PlayerSoundManager.cs" />
      <Compile Include="Assets\CharacterLoader.cs" />
