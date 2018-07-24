@@ -4,13 +4,32 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Armature
+    100004: Bone
+    100006: Bone.001
+    100008: Bone.002
+    100010: Bone.002_end
+    100012: punching bag
     400000: //RootNode
+    400002: Armature
+    400004: Bone
+    400006: Bone.001
+    400008: Bone.002
+    400010: Bone.002_end
+    400012: punching bag
     2100000: Material.001
     2100002: Material.002
     2300000: //RootNode
+    2300002: punching bag
     3300000: //RootNode
+    3300002: punching bag
     4300000: Cylinder
     4300002: punching bag
+    7400000: Armature|ArmatureAction
+    7400002: Armature|idle
+    7400004: Armature|jabbed
+    9500000: //RootNode
+    13700000: punching bag
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -31,7 +50,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -62,8 +81,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -85,10 +104,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

@@ -4,7 +4,17 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Armature
+    100004: Bone
+    100006: Bone_001
+    100008: Bone_002
+    100010: punching_bag
     400000: //RootNode
+    400002: Armature
+    400004: Bone
+    400006: Bone_001
+    400008: Bone_002
+    400010: punching_bag
     2100000: Material_001
     2100002: Material_002
     2300000: //RootNode
@@ -12,7 +22,10 @@ ModelImporter:
     4300000: Cylinder
     4300002: punching_bag
     7400000: Default Take
+    7400002: jabbed
+    7400004: idle
     9500000: //RootNode
+    13700000: punching_bag
   externalObjects: {}
   materials:
     importMaterials: 1
