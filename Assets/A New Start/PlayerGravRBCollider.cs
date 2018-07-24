@@ -29,7 +29,20 @@ public class PlayerGravRBCollider : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision col){
-		Debug.Log (col.gameObject);
+		//Debug.Log (col.collider.name);
+		Debug.Log("*");
+		List<string> collision_collider_names = new List<string>();
+		for (int i = 0; i < col.contacts.Length; i++) {
+			if (
+				(col.contacts [i].thisCollider.enabled) && 
+				(col.contacts[i].thisCollider.name == gameObject.name) &&
+				!collision_collider_names.Contains(col.collider.name)
+			) {
+				Debug.Log ("===============" + col.collider.name);
+				collision_collider_names.Add (col.collider.name);
+			}
+		}
+
 		if(col.gameObject.GetComponent<PunchingBagAnimationManager>())
 			front_hand.set_front_hand_collider(false);
 		pam.trigger_landing ();
