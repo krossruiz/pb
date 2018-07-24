@@ -252,6 +252,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &353292596 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1891364514065344, guid: f545d665b6fd106438a52aaad5d0af32,
+    type: 2}
+  m_PrefabInternal: {fileID: 1404890320}
+--- !u!65 &353292598
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 353292596}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0052734013, y: 0.017593654, z: 0.0120416}
+  m_Center: {x: 0.00034391508, y: 0.00731756, z: 0.00016226096}
+--- !u!114 &353292599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 353292596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35536cfe1508bc644823fa316788c0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player_hand_placement: 1
 --- !u!1 &962001285 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1605634333124116, guid: f545d665b6fd106438a52aaad5d0af32,
@@ -732,6 +761,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.750614, y: 1.4889754, z: 4.002823}
   m_Center: {x: -0.0054990053, y: 0.019979512, z: 2.0014396}
+--- !u!1 &1480084626 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1798732529312478, guid: f545d665b6fd106438a52aaad5d0af32,
+    type: 2}
+  m_PrefabInternal: {fileID: 1404890320}
+--- !u!65 &1480084628
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1480084626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0052734013, y: 0.017593654, z: 0.0120416}
+  m_Center: {x: 0.00034391508, y: 0.00731756, z: 0.00016226096}
+--- !u!114 &1480084629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1480084626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35536cfe1508bc644823fa316788c0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player_hand_placement: 0
 --- !u!1 &1856850558
 GameObject:
   m_ObjectHideFlags: 3

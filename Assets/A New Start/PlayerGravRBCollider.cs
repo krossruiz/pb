@@ -18,7 +18,12 @@ public class PlayerGravRBCollider : MonoBehaviour {
 		
 	}
 
-	void OnCollisionEnter(){
+	void OnCollisionEnter(Collision col){
+		ContactPoint[] contacts = col.contacts;
+		for (int i = 0; i < col.contacts.Length; i++) {
+			Debug.Log (contacts [0].otherCollider.gameObject);
+		}
 		pam.trigger_landing ();
+		Debug.Log ("hello");
 	}
 }

@@ -86,6 +86,9 @@
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Kross/Desktop/PunchBois/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.TextMeshPro.Editor">
+ <HintPath>C:/Users/Kross/Desktop/PunchBois/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="com.unity.render-pipelines.lightweight.Runtime">
  <HintPath>C:/Users/Kross/Desktop/PunchBois/Library/ScriptAssemblies/com.unity.render-pipelines.lightweight.Runtime.dll</HintPath>
  </Reference>
@@ -107,14 +110,11 @@
  <Reference Include="Unity.ShaderGraph.Editor">
  <HintPath>C:/Users/Kross/Desktop/PunchBois/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
  </Reference>
- <Reference Include="com.unity.render-pipelines.core.IncludePaths">
- <HintPath>C:/Users/Kross/Desktop/PunchBois/Library/ScriptAssemblies/com.unity.render-pipelines.core.IncludePaths.dll</HintPath>
- </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/Kross/Desktop/PunchBois/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Kross/Desktop/PunchBois/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <Reference Include="com.unity.render-pipelines.core.IncludePaths">
+ <HintPath>C:/Users/Kross/Desktop/PunchBois/Library/ScriptAssemblies/com.unity.render-pipelines.core.IncludePaths.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

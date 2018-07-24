@@ -3,15 +3,16 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\A New Start\PlayerMovementManager.cs">
     <Files>
       <File FileName="Assets\A New Start\Player Spawner\PlayerSpawner.cs" Line="1" Column="1" />
-      <File FileName="Assets\A New Start\PlayerMovementManager.cs" Line="119" Column="20" />
+      <File FileName="Assets\A New Start\PlayerMovementManager.cs" Line="178" Column="3" />
       <File FileName="Assets\A New Start\CharacterFacingDirections.cs" Line="1" Column="1" />
-      <File FileName="Assets\A New Start\PlayerAnimatorParameters.cs" Line="20" Column="2" />
-      <File FileName="Assets\A New Start\PlayerAnimationManager.cs" Line="53" Column="10" />
+      <File FileName="Assets\A New Start\PlayerAnimatorParameters.cs" Line="1" Column="1" />
+      <File FileName="Assets\A New Start\PlayerAnimationManager.cs" Line="1" Column="1" />
       <File FileName="Assets\A New Start\GravityManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Player\PlayerMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\ResetAnimatorParameter.cs" Line="20" Column="11" />
+      <File FileName="Assets\ResetAnimatorParameter.cs" Line="1" Column="1" />
       <File FileName="Assets\Player\ResetJabOnEnter.cs" Line="1" Column="1" />
-      <File FileName="Assets\A New Start\InputManager.cs" Line="70" Column="5" />
+      <File FileName="Assets\A New Start\InputManager.cs" Line="9" Column="27" />
+      <File FileName="Assets\A New Start\PlayerGravRBCollider.cs" Line="17" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

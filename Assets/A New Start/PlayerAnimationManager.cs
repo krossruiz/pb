@@ -4,16 +4,41 @@ using UnityEngine;
 
 public class PlayerAnimationManager : MonoBehaviour {
 
-	private Animator animator;
+	public Animator animator;
+	private PlayerHandCollider front_hand;
+	private PlayerHandCollider back_hand;
 
 	// Use this for initialization
 	void Start () {
+		PlayerHandCollider[] hand_colliders = this.GetComponentsInChildren<PlayerHandCollider> ();
+		for (int i = 0; i < hand_colliders.Length; i++) {
+			if (hand_colliders [i].player_hand_placement == PlayerHandCollider.PlayerHandPlacement.FRONT) {
+				front_hand = hand_colliders [i];
+			}
+			if (hand_colliders [i].player_hand_placement == PlayerHandCollider.PlayerHandPlacement.BACK) {
+				back_hand = hand_colliders [i];
+			}
+		}
 		animator = this.GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void enable_front_hand_collider(){
+		animator.SetBool ("front_hand_collider_enabled", true);
+		front_hand.set_hand_collider (true);
+	}
+
+	public void disable_front_hand_collider(){
+		animator.SetBool ("front_hand_collider_enabled", false);
+		front_hand.set_hand_collider (false);
+	}
+
+	public void set_front_hand_collider_enabled(bool val){
+		animator.SetBool ("front_hand_collider_enabled", val);
 	}
 
 	public void trigger_jab(){
