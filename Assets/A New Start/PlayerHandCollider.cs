@@ -22,13 +22,15 @@ public class PlayerHandCollider : MonoBehaviour {
 
 	void OnCollisionEnter(Collision other){
 		Debug.Log (player_hand_placement.ToString () + " collided");
+		set_front_hand_collider (false);
 	}
 
-	public void set_hand_collider(bool val){
+	public void set_front_hand_collider(bool val){
 		if (val)
-			Debug.Log ("HAND COLLIDER ENABLED");
+			Debug.Log ("HAND COLLIDER ENABLED " + val.ToString());
 		else
-			Debug.Log ("HAND COLLIDER DISABLED");
+			Debug.Log ("HAND COLLIDER DISABLED " + val.ToString());
+		
 		this.GetComponent<Collider> ().enabled = val;
 	}
 		

@@ -29,12 +29,12 @@ public class PlayerAnimationManager : MonoBehaviour {
 
 	public void enable_front_hand_collider(){
 		animator.SetBool ("front_hand_collider_enabled", true);
-		front_hand.set_hand_collider (true);
+		front_hand.set_front_hand_collider (true);
 	}
 
 	public void disable_front_hand_collider(){
 		animator.SetBool ("front_hand_collider_enabled", false);
-		front_hand.set_hand_collider (false);
+		front_hand.set_front_hand_collider (false);
 	}
 
 	public void set_front_hand_collider_enabled(bool val){
