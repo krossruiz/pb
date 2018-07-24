@@ -21,7 +21,7 @@ public class PlayerSpawner : MonoBehaviour {
 
 	void spawn_boxer(){
 		GameObject player = Instantiate (boxer.gameObject, this.transform.position, Quaternion.identity);
-		input_manager.add_player (player);
+		input_manager.add_player_one (player);
 	}
 
 	void OnDrawGizmos(){

@@ -38,6 +38,9 @@ public class PlayerGravRBCollider : MonoBehaviour {
 				!collision_collider_names.Contains(col.collider.name)
 			) {
 				Debug.Log ("Grav RB Colliding with " + col.collider.name);
+				if (col.collider.name == "left_hand") {
+					col.contacts [i].thisCollider.GetComponent<PlayerMovementManager>().request_death();
+				}
 				collision_collider_names.Add (col.collider.name);
 			}
 		}

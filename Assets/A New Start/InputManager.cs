@@ -6,29 +6,44 @@ public class InputManager : MonoBehaviour {
 
 	private PlayerAnimationManager pam;
 	private PlayerMovementManager pmm;
-	public GameObject player;
+	private PlayerAnimationManager p2am;
+	private PlayerMovementManager p2mm;
+	public GameObject player_1;
+	public GameObject player_2;
 
 	// Use this for initialization
 	void Start () {
-		if (player) {
-			add_player (player);
+		if (player_1) {
+			add_player_one (player_1);
+		}
+		if (player_2) {
+			add_player_two (player_2);
 		}
 	}
 
-	public void add_player(GameObject new_player){
-		if (!player) {
-			player = new_player;
+	public void add_player_one(GameObject new_player){
+		if (!player_1) {
+			player_1 = new_player;
 		}
-		pam = player.GetComponentInChildren<PlayerAnimationManager> ();
-		pmm = player.GetComponent<PlayerMovementManager> ();
+		pam = player_1.GetComponentInChildren<PlayerAnimationManager> ();
+		pmm = player_1.GetComponent<PlayerMovementManager> ();
+	}
+
+	public void add_player_two(GameObject new_player){
+		if (!player_2) {
+			player_2 = new_player;
+		}
+		p2am = player_2.GetComponentInChildren<PlayerAnimationManager> ();
+		p2mm = player_2.GetComponent<PlayerMovementManager> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (player) {
+		if (player_1) {
 			wasd_listener ();
+			arrows_listener();
 		}
-		arrows_listener ();
+		//arrows_listener ();
 	}
 
 	void wasd_listener(){
@@ -89,34 +104,59 @@ public class InputManager : MonoBehaviour {
 	}
 
 	void arrows_listener(){
-		/////////////////////////////////////////
+		if (Input.GetKeyDown (KeyCode.RightBracket)) {
+			p2mm.request_revive ();
+		}
+		if (Input.GetKeyDown (KeyCode.Backslash)) {
+			p2mm.request_death ();
+		}
+		//if (Input.GetKeyDown (KeyCode.Z)) {
+			//pmm.request_landing ();
+		//}
+		////////////////////////////////////
 		if (Input.GetKeyDown (KeyCode.Return)) {
-			
+			p2mm.request_jab ();
 		}
-		//////////////////////////////////////////
-		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-			
-		}
+		////////////////////////////////////
 		if (Input.GetKey (KeyCode.LeftArrow)) {
-
+			if (!Input.GetKey (KeyCode.RightArrow)) {
+				p2mm.request_run_left();
+			}
+			//pmm.request_run_left();
 		}
 		if (Input.GetKeyUp (KeyCode.LeftArrow)) {
-
+			if (!Input.GetKey (KeyCode.RightArrow)) {
+				p2mm.request_stop_running ();
+			}
 		}
-		///////////////////////////////////////////
-		if (Input.GetKeyDown (KeyCode.RightArrow)) {
-
-		}
+		/////////////////////////////////////
 		if (Input.GetKey (KeyCode.RightArrow)) {
-			
+			if(!Input.GetKey(KeyCode.LeftArrow)){
+				p2mm.request_run_right ();
+			}
+			//pmm.request_run_right();
 		}
 		if (Input.GetKeyUp (KeyCode.RightArrow)) {
+			if (!Input.GetKey (KeyCode.LeftArrow)) {
+				p2mm.request_stop_running ();
+			}
+		}
+		//////////////////////////////////////
+		if(Input.GetKeyDown(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow)){
+			Debug.Log ("Request face right");
+			p2mm.request_face_right ();
+			p2am.stop_running ();
+		}
+		if (Input.GetKeyDown (KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow)) {
+			Debug.Log ("Request face left");
+			p2mm.request_face_left ();
+			p2am.stop_running ();
+		}
+		///////////////////////////////////////
 
-		}
-		///////////////////////////////////////////
 		if (Input.GetKeyDown (KeyCode.RightShift)) {
-			
+			p2mm.request_jump ();
 		}
-		////////////////////////////////////////////
+		///////////////////////////////////////
 	}
 }
