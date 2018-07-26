@@ -13,10 +13,12 @@ public class InputManager : MonoBehaviour {
 	public GameObject player_1;
 	public GameObject player_2;
 	private ScoreManager score_manager;
+	public SceneManager scene_manager;
 
 	// Use this for initialization
 	void Start () {
 		score_manager = this.GetComponent<ScoreManager> ();
+		scene_manager = this.GetComponent<SceneManager> ();
 		if (player_1) {
 			add_player_one (player_1);
 		}
@@ -56,16 +58,17 @@ public class InputManager : MonoBehaviour {
 		//	arrows_listener();
 		//}
 		//arrows_listener ();
-		wasd_listener();
-		arrows_listener ();
+		//wasd_listener();
+		//arrows_listener ();
 		debug_listener ();
-		//dualshock_1_listener();
-		//dualshock_2_listener ();
+		dualshock_1_listener();
+		dualshock_2_listener ();
 	}
 
 	void debug_listener(){
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			score_manager.reset_score ();
+			scene_manager.reset_scene ();
 		}
 		if (Input.GetKeyDown (KeyCode.B)) {
 			pmm.request_reset_position ();

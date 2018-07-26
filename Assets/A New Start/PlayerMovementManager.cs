@@ -7,6 +7,7 @@ public class PlayerMovementManager : MonoBehaviour {
 	public float running_force_magnitude = 113.3f;
 	public float max_running_speed = 7.7f;
 	public float jump_magnitude = 10.0f;
+	public float jump_horizontal_velocity_multiplier = 1.0f;
 
 	private Vector3 initial_position;
 
@@ -15,6 +16,7 @@ public class PlayerMovementManager : MonoBehaviour {
 	private PlayerScoreManager psm;
 	private PlayerAnimationManager pam;
 	private PlayerManager pm;
+	public SceneManager sm;
 	public CharacterFacingDirections initial_facing_direction = CharacterFacingDirections.FACING_RIGHT;
 
 	// Use this for initialization
@@ -86,8 +88,13 @@ public class PlayerMovementManager : MonoBehaviour {
 	}
 
 	private void death(){
+		Invoke ("request_sm_to_reset_scene", 1f);
 		psm.decrement_score ();
 		pam.trigger_death ();
+	}
+
+	private void request_sm_to_reset_scene(){
+		sm.reset_scene ();
 	}
 
 	public void request_revive(){
@@ -116,6 +123,7 @@ public class PlayerMovementManager : MonoBehaviour {
 
 	private void jump(){
 		rb.AddForce (Vector3.up * jump_magnitude);
+		rb.velocity = new Vector3 (rb.velocity.x * jump_horizontal_velocity_multiplier, rb.velocity.y, rb.velocity.z);
 		pam.trigger_jump ();
 	}
 

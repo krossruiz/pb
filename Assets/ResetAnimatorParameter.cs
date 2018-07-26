@@ -21,6 +21,9 @@ public class ResetAnimatorParameter : StateMachineBehaviour {
 			case("revive"):
 				animator.SetBool (PlayerAnimatorParameters.revive_bool, false);
 				break;
+			case("front_hand_collider_enabled"):
+				animator.SetBool ("front_hand_collider_enabled", false);
+				break;
 			default:
 				break;
 			}

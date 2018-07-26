@@ -5,8 +5,8 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour {
 
-	private int left_player_lives = 5;
-	private int right_player_lives = 5;
+	public static int left_player_lives = 5;
+	public static int right_player_lives = 5;
 
 	public PlayerLivesIndicator[] left_player_lives_indicators;
 	public PlayerLivesIndicator[] right_player_lives_indicators;

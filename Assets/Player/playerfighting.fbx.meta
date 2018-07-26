@@ -318,8 +318,22 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0
+      - time: 0.0873993
         functionName: play_jab_miss_fx
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.3247955
+        functionName: enable_front_hand_collider
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.50705284
+        functionName: disable_front_hand_collider
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

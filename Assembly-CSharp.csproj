@@ -72,6 +72,7 @@
      <Compile Include="Assets\GoogleVR\Scripts\Audio\FmodGvrAudio.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Audio\FmodGvrAudioRoom.cs" />
      <Compile Include="Assets\GroundCollider.cs" />
+     <Compile Include="Assets\HandColliderStateController.cs" />
      <Compile Include="Assets\Master Controls\InputMaster.cs" />
      <Compile Include="Assets\Master Controls\SceneMaster.cs" />
      <Compile Include="Assets\Player\OtherPlayerInfo.cs" />
@@ -92,6 +93,7 @@
      <Compile Include="Assets\ResonanceAudio\Scripts\FmodResonanceAudio.cs" />
      <Compile Include="Assets\ResonanceAudio\Scripts\FmodResonanceAudioRoom.cs" />
      <Compile Include="Assets\River\OceanController.cs" />
+     <Compile Include="Assets\SceneManager.cs" />
      <Compile Include="Assets\ScoreManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
