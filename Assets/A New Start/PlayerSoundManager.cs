@@ -34,7 +34,6 @@ public class PlayerSoundManager : MonoBehaviour {
 	}
 
 	void play_jump_fx(){
-		Debug.Log ("Ran");
 		FMODUnity.RuntimeManager.PlayOneShot ("event:/Jump", this.transform.position);
 	}
 }

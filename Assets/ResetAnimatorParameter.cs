@@ -19,9 +19,7 @@ public class ResetAnimatorParameter : StateMachineBehaviour {
 				animator.SetBool (PlayerAnimatorParameters.running_bool, false);
 				break;
 			case("revive"):
-				Debug.Log ("revive reset");
 				animator.SetBool (PlayerAnimatorParameters.revive_bool, false);
-				Debug.Log (animator.GetBool (PlayerAnimatorParameters.revive_bool));
 				break;
 			default:
 				break;

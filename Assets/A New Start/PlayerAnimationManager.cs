@@ -22,12 +22,6 @@ public class PlayerAnimationManager : MonoBehaviour {
 		}
 		animator = this.GetComponent<Animator> ();
 		psm = this.GetComponent<PlayerSoundManager> ();
-
-		if (animator) {
-			Debug.Log ("Anuimator exits");
-		} else {
-			Debug.Log ("Animator does not exist");
-		}
 	}
 
 	

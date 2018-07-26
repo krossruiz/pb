@@ -8,11 +8,15 @@ public class InputManager : MonoBehaviour {
 	private PlayerMovementManager pmm;
 	private PlayerAnimationManager p2am;
 	private PlayerMovementManager p2mm;
+	private PlayerManager pm;
+	private PlayerManager p2m;
 	public GameObject player_1;
 	public GameObject player_2;
+	private ScoreManager score_manager;
 
 	// Use this for initialization
 	void Start () {
+		score_manager = this.GetComponent<ScoreManager> ();
 		if (player_1) {
 			add_player_one (player_1);
 		}
@@ -25,6 +29,8 @@ public class InputManager : MonoBehaviour {
 		if (!player_1) {
 			player_1 = new_player;
 		}
+		pm = player_1.GetComponent<PlayerManager> ();
+		pm.player_number = 1;
 		pam = player_1.GetComponentInChildren<PlayerAnimationManager> ();
 		pmm = player_1.GetComponent<PlayerMovementManager> ();
 	}
@@ -33,6 +39,8 @@ public class InputManager : MonoBehaviour {
 		if (!player_2) {
 			player_2 = new_player;
 		}
+		p2m = player_2.GetComponent<PlayerManager> ();
+		p2m.player_number = 2;
 		p2am = player_2.GetComponentInChildren<PlayerAnimationManager> ();
 		p2mm = player_2.GetComponent<PlayerMovementManager> ();
 	}
@@ -44,8 +52,17 @@ public class InputManager : MonoBehaviour {
 		//	arrows_listener();
 		//}
 		//arrows_listener ();
-		dualshock_1_listener();
-		dualshock_2_listener ();
+		wasd_listener();
+		arrows_listener ();
+		debug_listener ();
+		//dualshock_1_listener();
+		//dualshock_2_listener ();
+	}
+
+	void debug_listener(){
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			score_manager.reset_score ();
+		}
 	}
 
 	void dualshock_1_listener(){

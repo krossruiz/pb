@@ -12,6 +12,7 @@ public class PlayerMovementManager : MonoBehaviour {
 
 	private Rigidbody rb;
 	private Animator animator;
+	private PlayerScoreManager psm;
 	private PlayerAnimationManager pam;
 	public CharacterFacingDirections initial_facing_direction = CharacterFacingDirections.FACING_RIGHT;
 
@@ -20,13 +21,16 @@ public class PlayerMovementManager : MonoBehaviour {
 		initial_position = this.transform.position;
 		rb = this.GetComponent<Rigidbody> ();
 		animator = this.GetComponentInChildren<Animator> ();
+		psm = this.GetComponent<PlayerScoreManager> ();
 		pam = this.GetComponentInChildren<PlayerAnimationManager>();
 
 		switch(initial_facing_direction){
 		case(CharacterFacingDirections.FACING_LEFT):
+			this.transform.localScale = new Vector3 (-Mathf.Abs(this.transform.localScale.x), this.transform.localScale.y, this.transform.localScale.z);
 			animator.SetBool (PlayerAnimatorParameters.is_facing_left, true);
 			break;
 		case(CharacterFacingDirections.FACING_RIGHT):
+			this.transform.localScale = new Vector3 (Mathf.Abs(this.transform.localScale.x), this.transform.localScale.y, this.transform.localScale.z);
 			animator.SetBool (PlayerAnimatorParameters.is_facing_right, true);
 			break;
 		default:
@@ -80,6 +84,7 @@ public class PlayerMovementManager : MonoBehaviour {
 	}
 
 	private void death(){
+		psm.decrement_score ();
 		pam.trigger_death ();
 	}
 
@@ -109,7 +114,6 @@ public class PlayerMovementManager : MonoBehaviour {
 	}
 
 	private void jump(){
-		Debug.Log ("Triggrtrf");
 		rb.AddForce (Vector3.up * jump_magnitude);
 		pam.trigger_jump ();
 	}
@@ -128,9 +132,7 @@ public class PlayerMovementManager : MonoBehaviour {
 	}
 
 	public void request_face_left(){
-		Debug.Log ("FL");
 		if (animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.running_state_id)) {
-			Debug.Log("Face left all good man");
 			face_left ();
 		}		
 	}
@@ -141,9 +143,7 @@ public class PlayerMovementManager : MonoBehaviour {
 	}
 
 	public void request_face_right(){
-		Debug.Log ("FR");
 		if (animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.running_state_id)) {
-			Debug.Log("Face right all good man");
 			face_right ();
 		}
 	}
