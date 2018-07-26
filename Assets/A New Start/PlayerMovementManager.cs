@@ -8,6 +8,8 @@ public class PlayerMovementManager : MonoBehaviour {
 	public float max_running_speed = 7.7f;
 	public float jump_magnitude = 10.0f;
 
+	private Vector3 initial_position;
+
 	private Rigidbody rb;
 	private Animator animator;
 	private PlayerAnimationManager pam;
@@ -15,6 +17,7 @@ public class PlayerMovementManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		initial_position = this.transform.position;
 		rb = this.GetComponent<Rigidbody> ();
 		animator = this.GetComponentInChildren<Animator> ();
 		pam = this.GetComponentInChildren<PlayerAnimationManager>();
@@ -34,6 +37,10 @@ public class PlayerMovementManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void request_reset_position(){
+		this.transform.position = initial_position;
 	}
 
 	public void request_jab(){

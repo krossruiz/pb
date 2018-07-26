@@ -63,7 +63,7 @@ public class PlayerAnimationManager : MonoBehaviour {
 	}
 
 	public void trigger_revive(){
-		animator.SetTrigger (PlayerAnimatorParameters.revive_trigger_id);
+		animator.SetBool (PlayerAnimatorParameters.revive_bool, true);
 	}
 
 	public void trigger_jump(){

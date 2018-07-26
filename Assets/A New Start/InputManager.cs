@@ -50,7 +50,8 @@ public class InputManager : MonoBehaviour {
 
 	void dualshock_1_listener(){
 		string joystick_1 = "joystick 1 ";
-		if (Input.GetKeyDown (KeyCode.Tab)) {
+		if (Input.GetKeyDown (joystick_1 + "button 4")) {
+			Debug.Log ("Revive! joystick 1");
 			pmm.request_revive ();
 		}
 		if (Input.GetKeyDown (KeyCode.Q)) {
@@ -83,11 +84,15 @@ public class InputManager : MonoBehaviour {
 			pmm.request_jump ();
 		}
 		///////////////////////////////////////
+		if(Input.GetKeyDown(joystick_1 + "button 5")){
+			pmm.request_reset_position ();
+		}
 	}
 
 	void dualshock_2_listener(){
 		string joystick_2 = "joystick 2 ";
-		if (Input.GetKeyDown (KeyCode.Tab)) {
+		if (Input.GetKeyDown (joystick_2 + "button 4")) {
+			Debug.Log ("Revive! joystick 2");
 			p2mm.request_revive ();
 		}
 		if (Input.GetKeyDown (KeyCode.Q)) {
@@ -120,6 +125,9 @@ public class InputManager : MonoBehaviour {
 			p2mm.request_jump ();
 		}
 		///////////////////////////////////////
+		if(Input.GetKeyDown(joystick_2 + "button 5")){
+			p2mm.request_reset_position ();
+		}
 	}
 
 	void wasd_listener(){

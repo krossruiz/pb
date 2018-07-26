@@ -15,7 +15,7 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: revive
-    m_Type: 9
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -201,6 +201,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f414562a27fd46845b77d36a0d67cf87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114575672260852338
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1986556118daba947bcb17709f69666a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reset_on_enter: 1
+  reset_on_exit: 0
+  parameter: revive
 --- !u!114 &114594997484433814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -301,7 +315,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.76
   m_HasExitTime: 0
@@ -1080,6 +1094,7 @@ AnimatorState:
   - {fileID: 114170258824708382}
   - {fileID: 114986074604806272}
   - {fileID: 114073817455634990}
+  - {fileID: 114575672260852338}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1130,7 +1145,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102535617932342978}
-    m_Position: {x: 900, y: 216, z: 0}
+    m_Position: {x: 792, y: 288, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102888602968656872}
     m_Position: {x: 336, y: 204, z: 0}
