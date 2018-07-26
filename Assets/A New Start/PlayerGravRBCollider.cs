@@ -10,6 +10,7 @@ public class PlayerGravRBCollider : MonoBehaviour {
 	private PlayerHandCollider front_hand;
 	private PlayerHandCollider back_hand;
 	private PlayerSoundManager p_sound_m;
+	private BoxCollider grav_collider;
 
 	private Animator animator;
 
@@ -21,6 +22,8 @@ public class PlayerGravRBCollider : MonoBehaviour {
 		pam = this.GetComponentInChildren<PlayerAnimationManager> ();
 		p_score_m = this.GetComponent<PlayerScoreManager> ();
 		p_sound_m = this.GetComponentInChildren<PlayerSoundManager> ();
+		grav_collider = this.GetComponent<BoxCollider> ();
+			
 		PlayerHandCollider[] hand_colliders = this.GetComponentsInChildren<PlayerHandCollider> ();
 		for (int i = 0; i < hand_colliders.Length; i++) {
 			if (hand_colliders [i].player_hand_placement == PlayerHandCollider.PlayerHandPlacement.FRONT)
@@ -49,9 +52,9 @@ public class PlayerGravRBCollider : MonoBehaviour {
 			) {
 				Debug.Log ("Grav RB Colliding with " + col.collider.name);
 				if (col.collider.name == "left_hand") {
-					col.contacts [i].thisCollider.GetComponent<PlayerMovementManager>().request_death();
+					this.GetComponent<PlayerMovementManager>().request_death();
 					Animator other_animator = col.collider.transform.parent.parent.GetComponent<Animator> ();
-
+					Physics.IgnoreCollision (grav_collider, col.collider.transform.parent.parent.parent.GetComponent<BoxCollider> ());
 					if (!animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.death_state_id)) {
 						if (other_animator.GetBool (PlayerAnimatorParameters.is_facing_left)) {
 							Instantiate (explosion_particles, col.contacts[i].point, Quaternion.Euler(new Vector3(0,0,90)));

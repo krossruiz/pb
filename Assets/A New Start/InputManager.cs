@@ -23,6 +23,10 @@ public class InputManager : MonoBehaviour {
 		if (player_2) {
 			add_player_two (player_2);
 		}
+		pm.player_one = player_1;
+		pm.player_two = player_2;
+		p2m.player_one = player_1;
+		p2m.player_two = player_2;
 	}
 
 	public void add_player_one(GameObject new_player){

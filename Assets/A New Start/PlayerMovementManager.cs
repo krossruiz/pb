@@ -14,6 +14,7 @@ public class PlayerMovementManager : MonoBehaviour {
 	private Animator animator;
 	private PlayerScoreManager psm;
 	private PlayerAnimationManager pam;
+	private PlayerManager pm;
 	public CharacterFacingDirections initial_facing_direction = CharacterFacingDirections.FACING_RIGHT;
 
 	// Use this for initialization
@@ -23,6 +24,7 @@ public class PlayerMovementManager : MonoBehaviour {
 		animator = this.GetComponentInChildren<Animator> ();
 		psm = this.GetComponent<PlayerScoreManager> ();
 		pam = this.GetComponentInChildren<PlayerAnimationManager>();
+		pm = this.GetComponent<PlayerManager> ();
 
 		switch(initial_facing_direction){
 		case(CharacterFacingDirections.FACING_LEFT):
@@ -89,17 +91,16 @@ public class PlayerMovementManager : MonoBehaviour {
 	}
 
 	public void request_revive(){
-		if (animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.death_state_id)) {
+		if (animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.death_state_id) &&
+			!animator.GetNextAnimatorStateInfo(PlayerAnimatorStates.default_anim_layer_index).IsName(PlayerAnimatorStates.idle_state_id)
+		) {
 			revive ();
 		}
 	}
 
 	private void revive(){
-		if (animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.death_state_id) &&
-			!animator.GetNextAnimatorStateInfo(PlayerAnimatorStates.default_anim_layer_index).IsName(PlayerAnimatorStates.idle_state_id)
-		) {
-			pam.trigger_revive ();
-		}
+		Physics.IgnoreCollision (pm.player_one.GetComponent<BoxCollider> (), pm.player_two.GetComponent<BoxCollider> (), false);
+		pam.trigger_revive ();
 	}
 
 	public void request_jump(){

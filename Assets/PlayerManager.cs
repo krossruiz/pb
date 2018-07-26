@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour {
 
 	public int player_number;
+	public GameObject player_one;
+	public GameObject player_two;
 
 	// Use this for initialization
 	void Start () {
