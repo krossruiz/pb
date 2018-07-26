@@ -6,8 +6,10 @@ public class PlayerGravRBCollider : MonoBehaviour {
 
 	private PlayerMovementManager pmm;
 	private PlayerAnimationManager pam;
+	private PlayerScoreManager p_score_m;
 	private PlayerHandCollider front_hand;
 	private PlayerHandCollider back_hand;
+	private PlayerSoundManager p_sound_m;
 
 	private Animator animator;
 
@@ -17,6 +19,8 @@ public class PlayerGravRBCollider : MonoBehaviour {
 	void Start () {
 		pmm = this.GetComponent<PlayerMovementManager> ();
 		pam = this.GetComponentInChildren<PlayerAnimationManager> ();
+		p_score_m = this.GetComponent<PlayerScoreManager> ();
+		p_sound_m = this.GetComponentInChildren<PlayerSoundManager> ();
 		PlayerHandCollider[] hand_colliders = this.GetComponentsInChildren<PlayerHandCollider> ();
 		for (int i = 0; i < hand_colliders.Length; i++) {
 			if (hand_colliders [i].player_hand_placement == PlayerHandCollider.PlayerHandPlacement.FRONT)
@@ -57,6 +61,11 @@ public class PlayerGravRBCollider : MonoBehaviour {
 						};
 					}
 
+				}
+				if (col.collider.name == "OutOfBounds") {
+					p_sound_m.play_out_of_bounds_fx ();
+					p_score_m.decrement_score ();
+					pmm.request_reset_position ();
 				}
 				collision_collider_names.Add (col.collider.name);
 			}

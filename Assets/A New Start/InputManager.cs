@@ -63,6 +63,12 @@ public class InputManager : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			score_manager.reset_score ();
 		}
+		if (Input.GetKeyDown (KeyCode.B)) {
+			pmm.request_reset_position ();
+		}
+		if (Input.GetKeyDown (KeyCode.N)) {
+			p2mm.request_reset_position ();
+		}
 	}
 
 	void dualshock_1_listener(){

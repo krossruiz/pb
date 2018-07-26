@@ -36,4 +36,8 @@ public class PlayerSoundManager : MonoBehaviour {
 	void play_jump_fx(){
 		FMODUnity.RuntimeManager.PlayOneShot ("event:/Jump", this.transform.position);
 	}
+
+	public void play_out_of_bounds_fx(){
+		FMODUnity.RuntimeManager.PlayOneShot ("event:/OutOfBounds", this.transform.position);
+	}
 }

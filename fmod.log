@@ -8,7 +8,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000000002CA65458 isAsync 1 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000000003270B7E8 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -23,58 +23,318 @@
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 815328
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 18432
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 878976
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19552
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000003ADDF5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000681EF5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB8850D9C0
 [LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB8850D990
 [LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB8850DA90
 [LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB8850DB50
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000350D9DE8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='jab_punch', format=2, channels=2, frequency=48000, lengthbytes=28928, lengthpcm=117000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.416870.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 815328
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 18432
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000003ADDF5FC
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB8850D9C0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB8850D990
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB8850DA90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB8850DB50
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000350D5168
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000350D9BC8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='grassstep', format=2, channels=2, frequency=48000, lengthbytes=6880, lengthpcm=37616, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.052795.
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 815328
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 18432
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 878976
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19552
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000003ADDF5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000681EF5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB8850D9C0
 [LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB8850D990
 [LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB8850DA90
 [LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB8850DB50
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000350D99A8
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000350D8248
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='jump', format=2, channels=2, frequency=48000, lengthbytes=11360, lengthpcm=85263, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.348755.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 878976
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19552
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000681EF5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB8850D9C0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB8850D990
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB8850DA90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB8850DB50
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000350D46C8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='miss', format=2, channels=2, frequency=48000, lengthbytes=6368, lengthpcm=85263, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.220245.
-[LOG] SoundI::release                          :  (0000000044879BC8)
-[LOG] SoundI::release                          :     miss (000000004A1118A8)
-[LOG] SoundI::release                          :  (00000000448798E8)
-[LOG] SoundI::release                          :     jab_punch (000000002C8E6148)
-[LOG] SoundI::release                          :  (0000000044879498)
-[LOG] SoundI::release                          :     grassstep (00000000499C0078)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 878976
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19552
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000681EF5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB8850D9C0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB8850D990
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB8850DA90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB8850DB50
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000350D7368
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='jab_punch', format=2, channels=2, frequency=48000, lengthbytes=28928, lengthpcm=117000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.416870.
+[LOG] SystemI::createSound                     : filename = PunchBoisFMOD\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 000000003808F818 : node = 000000004458E2A0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000499C1548.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003808F818
+[LOG] SystemI::createSoundInternal             :     Create name='PunchBoisFMOD\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 878976
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19552
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004458E3B8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='laserSHOOT', format=2, channels=2, frequency=48000, lengthbytes=63520, lengthpcm=514089, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.538818.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003808F818
+[LOG] SoundI::getSubSound                      : sound 000000003808F818.  Subsound index 0 / 1
+[LOG] SoundI::release                          : laserSHOOT (000000003808F818)
+[LOG] SoundI::release                          :     laserSHOOT (00000000499C1738)
+[LOG] SoundI::release                          :     laserSHOOT (000000003808FD28)
+[LOG] SystemI::createSound                     : filename = PunchBoisFMOD\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000003808E3D8 : node = 000000004458D820
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000499C1548.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003808E3D8
+[LOG] SystemI::createSoundInternal             :     Create name='PunchBoisFMOD\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 878976
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19552
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004458D938
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='laserSHOOT', format=2, channels=2, frequency=48000, lengthbytes=63520, lengthpcm=514089, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.538818.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003808E3D8
+[LOG] SoundI::getSubSound                      : sound 000000003808E3D8.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = PunchBoisFMOD\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000003808EFA8 : node = 000000004458D2E0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000499C1548.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003808EFA8
+[LOG] SystemI::createSoundInternal             :     Create name='PunchBoisFMOD\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 878976
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19552
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004458D3F8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='laserSHOOT', format=2, channels=2, frequency=48000, lengthbytes=63520, lengthpcm=514089, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.538818.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003808EFA8
+[LOG] SoundI::getSubSound                      : sound 000000003808EFA8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : laserSHOOT (000000003808E3D8)
+[LOG] SoundI::release                          :     laserSHOOT (000000002CE628E8)
+[LOG] SoundI::release                          :     laserSHOOT (000000003808EDF8)
+[LOG] SoundI::release                          : laserSHOOT (000000003808EFA8)
+[LOG] SoundI::release                          :     laserSHOOT (000000002CE62268)
+[LOG] SoundI::release                          :     laserSHOOT (000000003808FD28)
+[LOG] SystemI::createSound                     : filename = PunchBoisFMOD\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000003808EDF8 : node = 000000004458D820
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000499C1548.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003808EDF8
+[LOG] SystemI::createSoundInternal             :     Create name='PunchBoisFMOD\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 878976
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19552
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004458D938
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='laserSHOOT', format=2, channels=2, frequency=48000, lengthbytes=63520, lengthpcm=514089, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.538818.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003808EDF8
+[LOG] SoundI::getSubSound                      : sound 000000003808EDF8.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = PunchBoisFMOD\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000003808F818 : node = 000000004458C9B0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000499C1548.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003808F818
+[LOG] SystemI::createSoundInternal             :     Create name='PunchBoisFMOD\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 878976
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19552
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004458CAC8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='laserSHOOT', format=2, channels=2, frequency=48000, lengthbytes=63520, lengthpcm=514089, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.538818.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003808F818
+[LOG] SoundI::getSubSound                      : sound 000000003808F818.  Subsound index 0 / 1
+[LOG] SoundI::release                          : laserSHOOT (000000003808EDF8)
+[LOG] SoundI::release                          :     laserSHOOT (000000002CE61D88)
+[LOG] SoundI::release                          :     laserSHOOT (000000003808FD28)
+[LOG] SoundI::release                          : laserSHOOT (000000003808F818)
+[LOG] SoundI::release                          :     laserSHOOT (000000002CE62748)
+[LOG] SoundI::release                          :     laserSHOOT (000000003808E3D8)
+[LOG] SystemI::createSound                     : filename = PunchBoisFMOD\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000003808F818 : node = 000000004458D2E0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000499C1548.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003808F818
+[LOG] SystemI::createSoundInternal             :     Create name='PunchBoisFMOD\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 878976
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19552
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004458D3F8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='laserSHOOT', format=2, channels=2, frequency=48000, lengthbytes=63520, lengthpcm=514089, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.538818.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003808F818
+[LOG] SoundI::getSubSound                      : sound 000000003808F818.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = PunchBoisFMOD\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000003808FD28 : node = 000000004458C5C0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000499C1548.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003808FD28
+[LOG] SystemI::createSoundInternal             :     Create name='PunchBoisFMOD\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 878976
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19552
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004458C6D8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='laserSHOOT', format=2, channels=2, frequency=48000, lengthbytes=63520, lengthpcm=514089, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.538818.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003808FD28
+[LOG] SoundI::getSubSound                      : sound 000000003808FD28.  Subsound index 0 / 1
+[LOG] SoundI::release                          : laserSHOOT (000000003808F818)
+[LOG] SoundI::release                          :     laserSHOOT (000000002CE62A88)
+[LOG] SoundI::release                          :     laserSHOOT (000000003808E3D8)
+[LOG] SoundI::release                          : laserSHOOT (000000003808FD28)
+[LOG] SoundI::release                          :     laserSHOOT (000000002CE635E8)
+[LOG] SoundI::release                          :     laserSHOOT (000000003808EDF8)
+[LOG] SystemI::createSound                     : filename = PunchBoisFMOD\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000003808EFA8 : node = 000000004458D2E0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000499C1548.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003808EFA8
+[LOG] SystemI::createSoundInternal             :     Create name='PunchBoisFMOD\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 878976
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19552
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004458D3F8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='laserSHOOT', format=2, channels=2, frequency=48000, lengthbytes=63520, lengthpcm=514089, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.538818.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003808EFA8
+[LOG] SoundI::getSubSound                      : sound 000000003808EFA8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : laserSHOOT (000000003808EFA8)
+[LOG] SoundI::release                          :     laserSHOOT (000000002CE62268)
+[LOG] SoundI::release                          :     laserSHOOT (000000003808E3D8)
+[LOG] SystemI::createSound                     : filename = PunchBoisFMOD\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000003808EDF8 : node = 000000004458E2A0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000499C1548.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003808EDF8
+[LOG] SystemI::createSoundInternal             :     Create name='PunchBoisFMOD\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 878976
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19552
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004458E3B8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='laserSHOOT', format=2, channels=2, frequency=48000, lengthbytes=63520, lengthpcm=514089, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.538818.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003808EDF8
+[LOG] SoundI::getSubSound                      : sound 000000003808EDF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : laserSHOOT (000000003808EDF8)
+[LOG] SoundI::release                          :     laserSHOOT (000000002CE62748)
+[LOG] SoundI::release                          :     laserSHOOT (000000003808E3D8)
+[LOG] SystemI::createSound                     : filename = PunchBoisFMOD\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000003808E3D8 : node = 000000004458D6D0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000499C1548.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003808E3D8
+[LOG] SystemI::createSoundInternal             :     Create name='PunchBoisFMOD\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 878976
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19552
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004458D7E8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='laserSHOOT', format=2, channels=2, frequency=48000, lengthbytes=63520, lengthpcm=514089, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.538818.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003808E3D8
+[LOG] SoundI::getSubSound                      : sound 000000003808E3D8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : laserSHOOT (000000003808E3D8)
+[LOG] SoundI::release                          :     laserSHOOT (000000002CE62748)
+[LOG] SoundI::release                          :     laserSHOOT (000000003808EDF8)
+[LOG] SystemI::createSound                     : filename = PunchBoisFMOD\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000003808EDF8 : node = 000000004458C5C0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000499C1548.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003808EDF8
+[LOG] SystemI::createSoundInternal             :     Create name='PunchBoisFMOD\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 878976
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19552
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004458C6D8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='laserSHOOT', format=2, channels=2, frequency=48000, lengthbytes=63520, lengthpcm=514089, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.538818.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003808EDF8
+[LOG] SoundI::getSubSound                      : sound 000000003808EDF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : laserSHOOT (000000003808EDF8)
+[LOG] SoundI::release                          :     laserSHOOT (000000002CE618A8)
+[LOG] SoundI::release                          :     laserSHOOT (000000003808FD28)
+[LOG] SystemI::createSound                     : filename = PunchBoisFMOD\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000003808EDF8 : node = 000000004458CC50
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000499C1548.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003808EDF8
+[LOG] SystemI::createSoundInternal             :     Create name='PunchBoisFMOD\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 878976
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19552
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004458CD68
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='laserSHOOT', format=2, channels=2, frequency=48000, lengthbytes=63520, lengthpcm=514089, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.538818.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003808EDF8
+[LOG] SoundI::getSubSound                      : sound 000000003808EDF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : laserSHOOT (000000003808EDF8)
+[LOG] SoundI::release                          :     laserSHOOT (000000002CE62748)
+[LOG] SoundI::release                          :     laserSHOOT (000000003808F818)
+[LOG] SoundI::release                          :  (0000000033E39488)
+[LOG] SoundI::release                          :     miss (00000000499C0BD8)
+[LOG] SoundI::release                          :  (000000004AD7FD88)
+[LOG] SoundI::release                          :     jab_punch (00000000499C1DB8)
+[LOG] SoundI::release                          :  (0000000033E3B2B8)
+[LOG] SoundI::release                          :     jump (00000000499C06F8)
+[LOG] SoundI::release                          :  (0000000033E3AFD8)
+[LOG] SoundI::release                          :     grassstep (00000000499C0218)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -84,4 +344,6 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
 [LOG] SystemI::close                           : Closed.

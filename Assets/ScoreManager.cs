@@ -30,7 +30,11 @@ public class ScoreManager : MonoBehaviour {
 		} else if (left_player_lives == 1) {
 			left_player_lives -= 1;
 			left_player_lives_indicators [left_player_lives].deactivate();
-			game_over_text.SetText ("RIGHT PLAYER WINS");
+			if (right_player_lives == left_player_lives) {
+				game_over_text.SetText ("TIE");
+			} else {
+				game_over_text.SetText ("RIGHT PLAYER WINS");
+			}
 		}
 	}
 
@@ -41,7 +45,11 @@ public class ScoreManager : MonoBehaviour {
 		} else if (right_player_lives == 1) {
 			right_player_lives -= 1;
 			right_player_lives_indicators [right_player_lives].deactivate();
-			game_over_text.SetText ("LEFT PLAYER WINS");
+			if (right_player_lives == left_player_lives) {
+				game_over_text.SetText ("TIE");
+			} else {
+				game_over_text.SetText ("LEFT PLAYER WINS");
+			}
 		}
 	}
 
