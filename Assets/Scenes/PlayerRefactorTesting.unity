@@ -895,6 +895,12 @@ Prefab:
       propertyPath: m_LocalRotation.z
       value: 0.13686605
       objectReference: {fileID: 0}
+    - target: {fileID: 114137566240914280, guid: f545d665b6fd106438a52aaad5d0af32,
+        type: 2}
+      propertyPath: explosion_particles
+      value: 
+      objectReference: {fileID: 1022530348755282, guid: a08082a9f5914d340be4c76a7098e46c,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f545d665b6fd106438a52aaad5d0af32, type: 2}
   m_IsPrefabAsset: 0

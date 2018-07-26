@@ -90,7 +90,11 @@ public class PlayerMovementManager : MonoBehaviour {
 	}
 
 	private void revive(){
-		pam.trigger_revive ();
+		if (animator.GetCurrentAnimatorStateInfo (PlayerAnimatorStates.default_anim_layer_index).IsName (PlayerAnimatorStates.death_state_id) &&
+			!animator.GetNextAnimatorStateInfo(PlayerAnimatorStates.default_anim_layer_index).IsName(PlayerAnimatorStates.idle_state_id)
+		) {
+			pam.trigger_revive ();
+		}
 	}
 
 	public void request_jump(){
