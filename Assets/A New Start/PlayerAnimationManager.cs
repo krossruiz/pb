@@ -7,6 +7,7 @@ public class PlayerAnimationManager : MonoBehaviour {
 	public Animator animator;
 	private PlayerHandCollider front_hand;
 	private PlayerHandCollider back_hand;
+	private PlayerSoundManager psm;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +21,15 @@ public class PlayerAnimationManager : MonoBehaviour {
 			}
 		}
 		animator = this.GetComponent<Animator> ();
+		psm = this.GetComponent<PlayerSoundManager> ();
+
+		if (animator) {
+			Debug.Log ("Anuimator exits");
+		} else {
+			Debug.Log ("Animator does not exist");
+		}
 	}
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -50,6 +59,7 @@ public class PlayerAnimationManager : MonoBehaviour {
 
 	public void trigger_death(){
 		animator.SetTrigger (PlayerAnimatorParameters.death_trigger_id);
+		psm.jab_land_fx ();
 	}
 
 	public void trigger_revive(){

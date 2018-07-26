@@ -39,11 +39,87 @@ public class InputManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (player_1) {
-			wasd_listener ();
-			arrows_listener();
-		}
+		//if (player_1) {
+		//	wasd_listener ();
+		//	arrows_listener();
+		//}
 		//arrows_listener ();
+		dualshock_1_listener();
+		dualshock_2_listener ();
+	}
+
+	void dualshock_1_listener(){
+		string joystick_1 = "joystick 1 ";
+		if (Input.GetKeyDown (KeyCode.Tab)) {
+			pmm.request_revive ();
+		}
+		if (Input.GetKeyDown (KeyCode.Q)) {
+			pmm.request_death ();
+		}
+		if (Input.GetKeyDown (KeyCode.Z)) {
+			pmm.request_landing ();
+		}
+		////////////////////////////////////
+		if (Input.GetKey(joystick_1 + "button 0")) {
+			pmm.request_jab ();
+		}
+
+		float x_axis = Input.GetAxis ("HorizontalP1");
+		////////////////////////////////////
+		if (x_axis < -0.5) {
+			pmm.request_run_left();
+		}
+			//pmm.request_run_left();
+		if (x_axis > -0.5 && x_axis < 0.5) {
+			pmm.request_stop_running ();
+		}
+		/////////////////////////////////////
+		if (x_axis > 0.5) {
+			pmm.request_run_right ();
+		}
+		///////////////////////////////////////
+
+		if (Input.GetKeyDown(joystick_1 + "button 1")) {
+			pmm.request_jump ();
+		}
+		///////////////////////////////////////
+	}
+
+	void dualshock_2_listener(){
+		string joystick_2 = "joystick 2 ";
+		if (Input.GetKeyDown (KeyCode.Tab)) {
+			p2mm.request_revive ();
+		}
+		if (Input.GetKeyDown (KeyCode.Q)) {
+			p2mm.request_death ();
+		}
+		if (Input.GetKeyDown (KeyCode.Z)) {
+			p2mm.request_landing ();
+		}
+		////////////////////////////////////
+		if (Input.GetKey(joystick_2 + "button 0")) {
+			p2mm.request_jab ();
+		}
+
+		float x_axis = Input.GetAxis ("HorizontalP2");
+		////////////////////////////////////
+		if (x_axis < 0) {
+			p2mm.request_run_left();
+		}
+		//pmm.request_run_left();
+		if (x_axis == 0) {
+			p2mm.request_stop_running ();
+		}
+		/////////////////////////////////////
+		if (x_axis > 0) {
+			p2mm.request_run_right ();
+		}
+		///////////////////////////////////////
+
+		if (Input.GetKeyDown(joystick_2 + "button 1")) {
+			p2mm.request_jump ();
+		}
+		///////////////////////////////////////
 	}
 
 	void wasd_listener(){

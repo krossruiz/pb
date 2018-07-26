@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{cd225fdd-d9f0-4734-85ac-63f29d50d6d1}">
         <property name="name">
-            <value>Punch Miss</value>
+            <value>JabMiss</value>
         </property>
         <property name="outputFormat">
             <value>2</value>
@@ -59,11 +59,18 @@
     <object class="EventAutomatableProperties" id="{e7ef4135-f8a8-49ad-8337-4f9932da5a9e}"/>
     <object class="MarkerTrack" id="{30395f75-3283-4268-9e6a-87d03d7180b3}"/>
     <object class="GroupTrack" id="{361b3d2b-aeb0-466e-b55e-eae08841df27}">
+        <relationship name="modules">
+            <destination>{88ce07e0-80f2-4578-a2bf-a1aaca388190}</destination>
+        </relationship>
         <relationship name="mixerGroup">
             <destination>{098b182c-ba4b-4f8b-83ff-b019b83e87c6}</destination>
         </relationship>
     </object>
-    <object class="Timeline" id="{a981c02b-b13c-4e7f-a3f7-ff0f6374dddc}"/>
+    <object class="Timeline" id="{a981c02b-b13c-4e7f-a3f7-ff0f6374dddc}">
+        <relationship name="modules">
+            <destination>{88ce07e0-80f2-4578-a2bf-a1aaca388190}</destination>
+        </relationship>
+    </object>
     <object class="EventMixerMaster" id="{39fdd615-4819-4a57-942b-cf5403bee5f6}">
         <relationship name="effectChain">
             <destination>{a28e6daf-50d4-4a36-83d4-1dab4765be47}</destination>
@@ -81,6 +88,14 @@
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{69b12910-c313-479c-92a7-9974b2f536f2}"/>
+    <object class="SingleSound" id="{88ce07e0-80f2-4578-a2bf-a1aaca388190}">
+        <property name="length">
+            <value>0.5</value>
+        </property>
+        <relationship name="audioFile">
+            <destination>{b5519229-3bfe-4e6a-822f-5d315f856320}</destination>
+        </relationship>
+    </object>
     <object class="EventMixerGroup" id="{098b182c-ba4b-4f8b-83ff-b019b83e87c6}">
         <property name="name">
             <value>Audio 1</value>
@@ -110,6 +125,10 @@
     </object>
     <object class="MixerBusPanner" id="{b99932c8-9de2-4f32-9c23-74fd8979f395}"/>
     <object class="MixerBusFader" id="{4c67127b-2e2b-4550-be74-25e20f69f474}"/>
-    <object class="SpatialiserEffect" id="{9b1602c7-04da-41e0-b91a-9605ab65bbb7}"/>
+    <object class="SpatialiserEffect" id="{9b1602c7-04da-41e0-b91a-9605ab65bbb7}">
+        <property name="maximumDistance">
+            <value>10000</value>
+        </property>
+    </object>
     <object class="MixerBusFader" id="{f6c0e11c-17c7-4aa0-bf2f-a6363df180fe}"/>
 </objects>

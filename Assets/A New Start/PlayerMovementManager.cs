@@ -98,6 +98,7 @@ public class PlayerMovementManager : MonoBehaviour {
 	}
 
 	private void jump(){
+		Debug.Log ("Triggrtrf");
 		rb.AddForce (Vector3.up * jump_magnitude);
 		pam.trigger_jump ();
 	}

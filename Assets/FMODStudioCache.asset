@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -17,14 +17,17 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 114794843105911896}
   - {fileID: 114925857456386590}
+  - {fileID: 114707225643013720}
+  - {fileID: 114658245368222232}
+  - {fileID: 114224742413414226}
   MasterBankRef: {fileID: 114377456094237146}
   StringsBankRef: {fileID: 114025664431686222}
-  stringsBankWriteTime: 636674539587995056
+  stringsBankWriteTime: 636681417604100728
   cacheVersion: 2
 --- !u!114 &114025664431686222
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -33,16 +36,81 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: PunchBoisFMOD\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636674539587995056
+  lastModified: 636681417604100728
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 770
+    Value: 914
   Exists: 1
+--- !u!114 &114189415691510868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/JabPunch
+  guid: a92a5cf34f20884eb898e0af84f6b54f
+  Banks:
+  - {fileID: 114377456094237146}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 971
+--- !u!114 &114224742413414226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/JabLand
+  guid: a92a5cf34f20884eb898e0af84f6b54f
+  Banks:
+  - {fileID: 114377456094237146}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 10000
+  Length: 971
+--- !u!114 &114255597118012666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Punch Miss
+  guid: dd5f22cdf0d9344785ac63f29d50d6d1
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
 --- !u!114 &114377456094237146
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -51,16 +119,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\Users\Kross\Desktop\PunchBois\PunchBoisFMOD\Build\Desktop\Master Bank.bank
-  lastModified: 636674539587918168
+  lastModified: 636681417604040730
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 783296
+    Value: 833760
   Exists: 1
+--- !u!114 &114658245368222232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/JabMiss
+  guid: dd5f22cdf0d9344785ac63f29d50d6d1
+  Banks:
+  - {fileID: 114377456094237146}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 10000
+  Length: 500
+--- !u!114 &114707225643013720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Jump
+  guid: 7e830f3980bb634e9b2c6a69fac5d2eb
+  Banks:
+  - {fileID: 114377456094237146}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 10000
+  Length: 500
 --- !u!114 &114794843105911896
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -82,7 +194,7 @@ MonoBehaviour:
 --- !u!114 &114925857456386590
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -96,8 +208,8 @@ MonoBehaviour:
   - {fileID: 114377456094237146}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 10000
+  MaxDistance: 50
   Length: 145

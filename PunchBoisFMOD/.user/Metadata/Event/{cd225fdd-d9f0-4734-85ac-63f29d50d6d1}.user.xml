@@ -12,7 +12,7 @@
     <object class="GroupTrack" id="{361b3d2b-aeb0-466e-b55e-eae08841df27}"/>
     <object class="Timeline" id="{a981c02b-b13c-4e7f-a3f7-ff0f6374dddc}">
         <property name="uiLastRulerScaleRatio">
-            <value>0.02461033634126333</value>
+            <value>0.00049913194444444441</value>
         </property>
     </object>
     <object class="EventMixerMaster" id="{39fdd615-4819-4a57-942b-cf5403bee5f6}">
@@ -22,6 +22,11 @@
     </object>
     <object class="MixerBusEffectChain" id="{cdb1321e-0652-431d-9e56-392baea1aa26}"/>
     <object class="MixerBusPanner" id="{69b12910-c313-479c-92a7-9974b2f536f2}"/>
+    <object class="SingleSound" id="{88ce07e0-80f2-4578-a2bf-a1aaca388190}">
+        <property name="uiTriggerBehaviorDrawerVisible">
+            <value>true</value>
+        </property>
+    </object>
     <object class="EventMixerGroup" id="{098b182c-ba4b-4f8b-83ff-b019b83e87c6}"/>
     <object class="MixerBusEffectChain" id="{a28e6daf-50d4-4a36-83d4-1dab4765be47}"/>
     <object class="MixerBusPanner" id="{c4cebeca-e575-449c-af5d-dc7dcfb98da2}"/>
