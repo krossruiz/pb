@@ -57,12 +57,12 @@ public class InputManager : MonoBehaviour {
 		//	wasd_listener ();
 		//	arrows_listener();
 		//}
-		//arrows_listener ();
-		//wasd_listener();
+		arrows_listener ();
+		wasd_listener();
 		//arrows_listener ();
 		debug_listener ();
-		dualshock_1_listener();
-		dualshock_2_listener ();
+		//dualshock_1_listener();
+		//dualshock_2_listener ();
 	}
 
 	void debug_listener(){

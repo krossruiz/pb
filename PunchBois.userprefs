@@ -1,20 +1,22 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ResetAnimatorParameter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\A New Start\PlayerGravRBCollider.cs">
     <Files>
-      <File FileName="Assets\A New Start\InputManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\A New Start\InputManager.cs" Line="61" Column="3" />
       <File FileName="Assets\A New Start\PlayerSoundManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\A New Start\PlayerMovementManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\A New Start\PlayerMovementManager.cs" Line="120" Column="12" />
       <File FileName="Assets\PlayerScoreManager.cs" Line="1" Column="1" />
       <File FileName="Assets\A New Start\JabHitParticle.cs" Line="1" Column="1" />
       <File FileName="Assets\A New Start\GravityManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\A New Start\PlayerGravRBCollider.cs" Line="1" Column="1" />
-      <File FileName="Assets\A New Start\PlayerAnimationManager.cs" Line="36" Column="20" />
+      <File FileName="Assets\A New Start\PlayerGravRBCollider.cs" Line="57" Column="25" />
+      <File FileName="Assets\A New Start\PlayerAnimationManager.cs" Line="1" Column="1" />
       <File FileName="Assets\A New Start\PlayerAnimatorParameters.cs" Line="1" Column="1" />
-      <File FileName="Assets\ResetAnimatorParameter.cs" Line="25" Column="61" />
+      <File FileName="Assets\ResetAnimatorParameter.cs" Line="1" Column="1" />
       <File FileName="Assets\ScoreManager.cs" Line="1" Column="1" />
       <File FileName="Assets\A New Start\PlayerLivesIndicator.cs" Line="1" Column="1" />
       <File FileName="Assets\PlayerManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\HandColliderStateController.cs" Line="1" Column="1" />
+      <File FileName="Assets\A New Start\PlayerHandCollider.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
